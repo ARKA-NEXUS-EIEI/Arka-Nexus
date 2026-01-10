@@ -86,7 +86,6 @@ html, body {
   mix-blend-mode: overlay;
 }
 
-/* Create floating elements for visual interest */
 .animated-background .particle {
   position: absolute;
   width: 100px;

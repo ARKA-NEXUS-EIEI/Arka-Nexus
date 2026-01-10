@@ -3,7 +3,7 @@ export const tokens = {
     brand: {
       primary: '#f97316',
       secondary: '#ea580c',
-      light: 'rgba(249, 115, 22, 0.1)',
+      dark: '#000000',
       'blue-bg': '#031a42',
     },
     neutral: {

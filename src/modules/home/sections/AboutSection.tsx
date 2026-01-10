@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import './AboutSection.css';
 import { VisionIcon, MissionIcon } from "./AboutIcons";
-import sampleVideo from "@/assets/videos/corevalues.mp4";
+import sampleVideo from "@/assets/videos/eiei.mp4";
 import Brochure from '@/assets/docs/Brochure.pdf';
 
 export default function AboutSection() {
@@ -35,7 +35,7 @@ export default function AboutSection() {
 
   const downloadBrochure = () => {
     const link = document.createElement('a');
-    link.href = Brochure; // Place your PDF in public folder
+    link.href = Brochure;
     link.download = 'Arka Nexus-brochure.pdf';
     link.click();
   };

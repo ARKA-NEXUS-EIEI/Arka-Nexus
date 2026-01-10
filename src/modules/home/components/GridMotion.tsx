@@ -1,11 +1,7 @@
 import { useEffect, useRef, type JSX } from 'react';
 import { gsap } from 'gsap';
 import './GridMotion.css';
-import bgVideo from '@/assets/images/main_vdo.mp4';
-
-type Props = {
-  autoSpeed?: number;
-};
+import bgVideo from '@/assets/videos/header_vdo.mp4';
 
 const GRID_ITEMS: (string | JSX.Element)[] = [
   'https://media.istockphoto.com/id/1390249924/photo/industrial-plant-for-the-production-of-sheet-metal-in-a-steel-mill-storage-of-sheet-rolls.jpg?s=1024x1024&w=is&k=20&c=hNYNzW3cJemADUDb8rmGhmpCT-E2bwtPyFS6eO9wT44=',
@@ -37,10 +33,11 @@ const GRID_ITEMS: (string | JSX.Element)[] = [
   'https://plus.unsplash.com/premium_photo-1678889596384-6e317ec8bf97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 ];
 
-export default function GridMotion({ autoSpeed = 1.5 }: Props) {
+export default function GridMotion() {
 
   const gradientColor = 'rgba(238, 255, 0, 0.3)';
   const heroTitle = "Arka Nexus";
+  const autoSpeed = 1.5;
 
   const gridRef = useRef(null);
   const rowRefs = useRef<HTMLDivElement[]>([]);

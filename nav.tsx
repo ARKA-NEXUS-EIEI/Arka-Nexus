@@ -2,23 +2,24 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { HashLink } from "react-router-hash-link";
+import "./Navbar.css";
 
-import arka_logo from "@/assets/images/logos/arka_Nexus.png";
-import training from "@/assets/images/nav_img/training.png";
-import energy from "@/assets/images/nav_img/energy_audit.png";
-import harmonic from "@/assets/images/nav_img/harmonic_audit.jpg";
-import solar from "@/assets/images/nav_img/solar.jpg";
-import vibration from "@/assets/images/nav_img/vibration.jpg";
+// import arka_logo from "@/assets/images/logos/arka_Nexus.png";
+// import training from "@/assets/images/training.png";
+// import energy from "@/assets/images/energy_audit.png";
+// import harmonic from "@/assets/images/harmonic_audit.jpg";
+// import solar from "@/assets/images/solar.jpg";
+// import vibration from "@/assets/images/vibration.jpg";
 
 const serviceImages: Record<string, string> = {
-  'energy-audit': energy,
-  'power-quality': 'https://5.imimg.com/data5/FL/OW/EJ/SELLER-18659820/power-quality-analysis-services-500x500.jpg',
-  'harmonic-study': harmonic,
-  'solar-panel-study': solar,
-  'thermal-study': 'https://th.bing.com/th/id/OIP.Ydng70W3djzKrcksUbF13AHaEr?rs=1&pid=ImgDetMain',
-  'vibration-audit': vibration,
-  'safety-audit': 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=250&fit=crop',
-  'training': training,
+//   'energy-audit': energy,
+//   'power-quality': 'https://5.imimg.com/data5/FL/OW/EJ/SELLER-18659820/power-quality-analysis-services-500x500.jpg',
+//   'harmonic-study': harmonic,
+//   'solar-panel-study': solar,
+//   'thermal-study': 'https://th.bing.com/th/id/OIP.Ydng70W3djzKrcksUbF13AHaEr?rs=1&pid=ImgDetMain',
+//   'vibration-audit': vibration,
+//   'safety-audit': 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=250&fit=crop',
+//   'training': training,
 };
 
 const services = [
@@ -49,7 +50,6 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -68,6 +68,21 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
     setIsMegaMenuOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const handleOutsideClick = (event: Event) => {
+      const target = event.target as HTMLElement;
+      if (isMobileMenuOpen && target && !target.closest('.navbar')) {
+        setIsMobileMenuOpen(false);
+        setIsAboutDropdownOpen(false);
+        setIsServicesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, [isMobileMenuOpen]);
+
+
   const handleContactClick = () => {
     setIsMobileMenuOpen(false);
     onContactClick();
@@ -80,12 +95,12 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
         : 'h-nav-h bg-neutral-offWhite backdrop-blur-md border-neutral-border'}`}>
       <div className="max-w-arka mx-auto px-safe-x flex items-center justify-between h-full">
         {/* Logo */}
-        <Link to="/" className="flex items-center z-[1100]">
+        <Link to="/" className="flex items-center z-[1001]">
           <motion.img
-            src={arka_logo}
+            // src={arka_logo}
             alt="Arka Nexus Logo"
-            whileHover={{ scale: 1.02 }}
             className={`transition-all duration-300 ${isScrolled ? 'h-[55px]' : 'h-[65px]'}`}
+            whileHover={{ scale: 1.02 }}
           />
         </Link>
 
@@ -96,7 +111,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
               <Link to="/" className={`flex items-center gap-2 px-4 py-3 rounded-nav-link text-nav-link transition-all
                 ${location.pathname === '/'
                   ? 'text-brand-primary font-semibold'
-                  : 'text-neutral-textMain hover:text-brand-primary'}`}>
+                  : 'text-neutral-textMain hover:text-brand-primary hover:bg-brand-light'}`}>
                 Home
               </Link>
             </li>
@@ -114,7 +129,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
               </Link>
               <div className="absolute top-full left-0 bg-white rounded-dropdown shadow-dropdown p-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                 {aboutItems.map((item, index) => (
-                  <HashLink key={index} to={item.link} className="block p-3 text-dropdown-link text-neutral-textMain hover:text-brand-primary rounded-md transition-all font-medium">
+                  <HashLink key={index} to={item.link} className="block p-3 text-dropdown-link text-neutral-textMain hover:bg-brand-light hover:text-brand-primary rounded-md transition-all font-medium">
                     {item.title}
                   </HashLink>
                 ))}
@@ -129,7 +144,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
             >
               <Link
                 to="/services"
-                className="flex items-center gap-2 px-4 py-3 text-neutral-textMain text-nav-link hover:text-brand-primary transition-all font-medium"
+                className="flex items-center gap-2 px-4 py-3 text-neutral-textMain text-nav-link hover:text-brand-primary font-medium"
               >
                 Our Services
                 <svg className={`transition-transform duration-300 ${isMegaMenuOpen ? 'rotate-180' : ''}`} width="12" height="12" viewBox="0 0 12 12">
@@ -160,28 +175,28 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
               )}
             </li>
 
-            <li className="relative group">
+            <li>
               <HashLink to="/#clients" className="flex items-center gap-2 px-4 py-3 text-neutral-textMain text-nav-link group-hover:text-brand-primary transition-all font-medium">
                 Valuable Clients
               </HashLink>
             </li>
 
-            <li className="relative group">
+            <li>
               <HashLink to="/instruments" className="flex items-center gap-2 px-4 py-3 text-neutral-textMain text-nav-link group-hover:text-brand-primary transition-all font-medium">
                 Instruments Used
               </HashLink>
             </li>
 
-            {/* <li className="relative group">
+            {/* <li>
               <Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>
                 Projects
               </Link>
             </li> */}
 
-            <li className="relative group">
-              <Link to="/snap-shot" className="flex items-center gap-2 px-4 py-3 text-neutral-textMain text-nav-link group-hover:text-brand-primary transition-all font-medium">
+            <li>
+              <HashLink to="/snap-shot" className="flex items-center gap-2 px-4 py-3 text-neutral-textMain text-nav-link group-hover:text-brand-primary transition-all font-medium">
                 Snap Shots
-              </Link>
+              </HashLink>
             </li>
           </ul>
 
@@ -211,92 +226,119 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
         </button>
 
         {/* Mobile Menu */}
-        {/* Mobile Menu Container */}
-        <div className={`fixed inset-0 w-full h-screen bg-neutral-offWhite z-[1050] transition-transform duration-300 ease-in-out
-            ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-          <div className="pt-24 px-8 pb-8 max-w-[500px] mx-auto overflow-y-auto h-full">
-            <ul className="flex flex-col list-none m-0 p-0">
-
-              {/* 1. Home Link */}
-              <li className="border-b border-neutral-border">
-                <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="block py-5 text-mobile-link font-medium text-neutral-textMain text-center hover:text-brand-primary transition-colors">
+        <div className={`fixed inset-0 w-full h-screen bg-white transition-transform duration-500 ease-in-out
+                ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+          <div className="mobile-menu-content">
+            <ul className="mobile-nav-links">
+              <li>
+                <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
                   Home
                 </Link>
               </li>
 
-              {/* 2. About Us - Clicking either text or icon toggles the menu */}
-              <li className="border-b border-neutral-border">
+              {/* Mobile About */}
+              <li className="mobile-dropdown">
                 <button
-                  className="flex items-center justify-center w-full py-5 text-mobile-link font-medium text-neutral-textMain hover:text-brand-primary transition-colors relative"
+                  className="mobile-dropdown-toggle about-toggle"
                   onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
                 >
                   About Us
-                  <svg className={`transition-transform duration-300 absolute right-0 ${isAboutDropdownOpen ? 'rotate-180' : ''}`} width="16" height="16" viewBox="0 0 12 12">
-                    <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="2" fill="none" />
+                  <svg className={`dropdown-icon ${isAboutDropdownOpen ? 'open' : ''}`} width="12" height="12" viewBox="0 0 12 12">
+                    <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" />
                   </svg>
                 </button>
-
-                {/* About Dropdown Content */}
-                <div className={`overflow-hidden transition-all duration-300 bg-neutral-light/20 rounded-lg ${isAboutDropdownOpen ? 'max-h-96 opacity-100 my-2' : 'max-h-0 opacity-0'}`}>
-                  {aboutItems.map((item, index) => (
-                    <HashLink key={index} to={item.link} onClick={() => setIsMobileMenuOpen(false)} className="block py-3 px-6 text-neutral-textMain hover:text-brand-primary text-center">
-                      {item.title}
-                    </HashLink>
-                  ))}
-                </div>
+                {isAboutDropdownOpen && (
+                  <div className="mobile-dropdown-content">
+                    {aboutItems.map((item, index) => (
+                      <HashLink
+                        key={index}
+                        to={item.link}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.title}
+                      </HashLink>
+                    ))}
+                  </div>
+                )}
               </li>
 
-              {/* 3. Our Services - TEXT navigates, ICON toggles */}
-              <li className="border-b border-neutral-border">
-                <div className="flex items-center justify-between w-full py-5 relative">
+              {/* Mobile Services */}
+              <li className="mobile-dropdown">
+                <div className="mobile-dropdown-header">
+                  {/* Clicking text navigates to /services */}
                   <Link
                     to="/services"
-                    className="flex-1 text-center pl-8 text-mobile-link font-medium text-neutral-textMain hover:text-brand-primary transition-colors"
+                    className="mobile-dropdown-link"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Our Services
                   </Link>
+
+                  {/* Clicking the arrow toggles the dropdown */}
                   <button
-                    className="p-1 hover:bg-neutral-light rounded-full transition-colors"
-                    onClick={(e) => { e.preventDefault(); setIsServicesDropdownOpen(!isServicesDropdownOpen); }}
+                    className="mobile-dropdown-toggle"
+                    onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                    aria-label="Toggle Services Dropdown"
                   >
-                    <svg className={`transition-transform duration-300 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} width="16" height="16" viewBox="0 0 12 12">
-                      <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="2" fill="none" />
+                    <svg
+                      className={`dropdown-icon ${isServicesDropdownOpen ? 'open' : ''}`}
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                    >
+                      <path
+                        d="M2 4l4 4 4-4"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        fill="none"
+                      />
                     </svg>
                   </button>
                 </div>
 
-                {/* Services Dropdown Content */}
-                <div className={`overflow-hidden transition-all duration-300 bg-neutral-light/20 rounded-lg ${isServicesDropdownOpen ? 'max-h-[500px] opacity-100 my-2' : 'max-h-0 opacity-0'}`}>
-                  {services.map((service, index) => (
-                    <Link key={index} to={service.link} onClick={() => setIsMobileMenuOpen(false)} className="block py-3 px-6 text-neutral-textMain hover:text-brand-primary text-center">
-                      {service.title}
-                    </Link>
-                  ))}
-                </div>
+                {isServicesDropdownOpen && (
+                  <div className="mobile-dropdown-content">
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        to={service.link}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </li>
 
-              {/* 4. Other Links */}
-              <li className="border-b border-neutral-border">
-                <HashLink to="/#clients" onClick={() => setIsMobileMenuOpen(false)} className="block py-5 text-mobile-link font-medium text-neutral-textMain text-center hover:text-brand-primary">
+
+              <li>
+                <HashLink to="/#clients" onClick={() => setIsMobileMenuOpen(false)}>
                   Valuable Clients
                 </HashLink>
               </li>
-              <li className="border-b border-neutral-border">
-                <HashLink to="/instruments" onClick={() => setIsMobileMenuOpen(false)} className="block py-5 text-mobile-link font-medium text-neutral-textMain text-center hover:text-brand-primary">
+
+              <li>
+                <HashLink to="/instruments" onClick={() => setIsMobileMenuOpen(false)}>
                   Instruments Used
                 </HashLink>
               </li>
-              <li className="border-b border-neutral-border">
-                <Link to="/snap-shot" onClick={() => setIsMobileMenuOpen(false)} className="block py-5 text-mobile-link font-medium text-neutral-textMain text-center hover:text-brand-primary">
+
+              {/* <li>
+                <Link to="/projects" onClick={() => setIsMobileMenuOpen(false)}>
+                  Projects
+                </Link>
+              </li> */}
+
+              <li>
+                <Link to="/snap-shot" onClick={() => setIsMobileMenuOpen(false)}>
                   Snap Shots
                 </Link>
               </li>
 
-              {/* 5. Contact Us Button */}
-              <li className="mt-8">
+              <li>
                 <button
-                  className="w-full bg-gradient-to-br from-brand-primary to-brand-secondary text-white py-4 rounded-button font-semibold text-lg shadow-button hover:opacity-90 transition-all active:scale-95"
+                  className="mobile-contact-btn"
                   onClick={handleContactClick}
                 >
                   Contact Us
