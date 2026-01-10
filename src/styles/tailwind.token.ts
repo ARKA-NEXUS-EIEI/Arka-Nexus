@@ -4,13 +4,14 @@ export const tokens = {
       primary: '#f97316',
       secondary: '#ea580c',
       light: 'rgba(249, 115, 22, 0.1)',
+      'blue-bg': '#031a42',
     },
     neutral: {
       white: '#ffffff',
       offWhite: 'rgba(255, 255, 255, 0.95)',
       light: '#F1F5F9',      
       textMain: '#374151',
-      textMuted: '#6B7280',
+      textMuted: '#a0aec0',
       border: 'rgba(0, 0, 0, 0.1)',
     }
   },

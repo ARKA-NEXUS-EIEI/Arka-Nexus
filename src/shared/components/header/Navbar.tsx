@@ -239,7 +239,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
                 {/* About Dropdown Content */}
                 <div className={`overflow-hidden transition-all duration-300 bg-neutral-light/20 rounded-lg ${isAboutDropdownOpen ? 'max-h-96 opacity-100 my-2' : 'max-h-0 opacity-0'}`}>
                   {aboutItems.map((item, index) => (
-                    <HashLink key={index} to={item.link} onClick={() => setIsMobileMenuOpen(false)} className="block py-3 px-6 text-neutral-textMuted hover:text-brand-primary text-center">
+                    <HashLink key={index} to={item.link} onClick={() => setIsMobileMenuOpen(false)} className="block py-3 px-6 text-neutral-textMain hover:text-brand-primary text-center">
                       {item.title}
                     </HashLink>
                   ))}
@@ -269,7 +269,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
                 {/* Services Dropdown Content */}
                 <div className={`overflow-hidden transition-all duration-300 bg-neutral-light/20 rounded-lg ${isServicesDropdownOpen ? 'max-h-[500px] opacity-100 my-2' : 'max-h-0 opacity-0'}`}>
                   {services.map((service, index) => (
-                    <Link key={index} to={service.link} onClick={() => setIsMobileMenuOpen(false)} className="block py-3 px-6 text-neutral-textMuted hover:text-brand-primary text-center">
+                    <Link key={index} to={service.link} onClick={() => setIsMobileMenuOpen(false)} className="block py-3 px-6 text-neutral-textMain hover:text-brand-primary text-center">
                       {service.title}
                     </Link>
                   ))}
