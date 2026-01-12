@@ -1,5 +1,6 @@
 import emailjs from "emailjs-com";
 import { emailConfig } from "../../config/email.config";
+import type { ContactFormData } from "./email.types";
 
 export const sendThankYouEmail = async (data: {
   name: string;
@@ -21,7 +22,7 @@ export const sendThankYouEmail = async (data: {
   );
 };
 
-export const sendNotificationEmail = async (data: any) => {
+export const sendNotificationEmail = async (data: ContactFormData) => {
   return emailjs.send(
     emailConfig.serviceId,
     emailConfig.notificationTemplateId,
