@@ -4,7 +4,9 @@ export const tokens = {
       primary: '#f97316',
       secondary: '#ea580c',
       dark: '#000000',
-      'blue-bg': '#031a42',
+      'primary-blue': '#031a42',
+      accent: '#e88011', 
+      'deep-navy': '#00001d',
     },
     neutral: {
       white: '#ffffff',
@@ -13,6 +15,10 @@ export const tokens = {
       textMain: '#374151',
       textMuted: '#a0aec0',
       border: 'rgba(0, 0, 0, 0.1)',
+    },
+    status: {
+      success: '#16a34a',
+      error: '#dc2626',
     }
   },
   spacing: {
@@ -23,8 +29,17 @@ export const tokens = {
     'safe-x': '2rem',
     'dropdown-gap': '0.5rem',
     'card-gap': '1.5rem',
+    'section-y': '3rem',    // Vertical padding for all sections (80px)
+    'content-gap': '2rem',  // Gap between related elements (32px)
+    'grid-gap': '1.5rem',   // Standard gap for grids (24px)
+    'stack-gap': '1rem',    // Small stack gap for headers/text (16px)
   },
   fontSize: {
+    'h1': ['2.5rem', { lineHeight: '1.2', fontWeight: '800' }], // Mobile: 40px
+    'h2': ['2rem', { lineHeight: '1.3', fontWeight: '700' }],   // Mobile: 32px
+    'h3': ['1.5rem', { lineHeight: '1.4', fontWeight: '600' }],
+    'body': ['1.25rem', { lineHeight: '1.6' }],
+    'body-sm': ['1rem', { lineHeight: '1.5' }],
     'nav-link': '1.1rem',
     'dropdown-link': '0.875rem',
     'mobile-link': '1.1rem', 
@@ -34,11 +49,12 @@ export const tokens = {
     'dropdown': '8px',
     'mega': '12px',
     'button': '25px',
-    'card': '8px',          
+    'card': '12px',          
   },
   shadows: {
     'dropdown': '0 10px 25px rgba(0, 0, 0, 0.15)',
     'mega': '0 20px 40px rgba(0, 0, 0, 0.15)',
     'button': '0 4px 15px rgba(249, 115, 22, 0.3)',
+    'card': '0 10px 30px -5px rgba(0, 0, 0, 0.1)',
   }
 };

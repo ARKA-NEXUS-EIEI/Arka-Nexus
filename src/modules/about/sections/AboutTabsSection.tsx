@@ -177,7 +177,7 @@ export default function AboutTabsSection() {
                             ))}
                         </div>
                         <div className="mt-10 text-center">
-                            <p className="years-highlight-legacy inline-block bg-[#bd8409] text-brand-blue-bg px-6 py-3 rounded-lg text-lg font-bold">
+                            <p className="years-highlight-legacy inline-block bg-[#bd8409] text-brand-primary-blue px-6 py-3 rounded-lg text-lg font-bold">
                                 <span className="mr-1">14+ years</span> of excellence in industrial consultancy and training
                             </p>
                         </div>

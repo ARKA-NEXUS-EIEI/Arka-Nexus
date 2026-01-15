@@ -98,7 +98,7 @@ export default function GridMotion() {
 
   return (
     <div className="relative w-full lg:h-[90vh] overflow-hidden flex items-center justify-center" ref={gridRef}>
-      <section className="relative w-full h-[40vh] md:h-[60vh] lg:h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[30vh] md:h-[60vh] lg:h-[90vh] flex items-center justify-center overflow-hidden">
 
         {/* Background Video */}
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-[-1]">
@@ -113,11 +113,11 @@ export default function GridMotion() {
 
         {/* Hero content */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[3] w-4/5 max-w-[800px] text-center text-neutral-white">
-          <h1 className="animated-title text-[4rem] sm:text-[6rem] lg:text-[8rem] mb-4">
+          <h1 className="animated-title text-[2rem] md:text-[6rem] lg:text-[8rem] mb-4">
             <span className="word">{heroTitle.split(' ')[0]}</span>
             <span className="word pl-4 sm:pl-8">{heroTitle.split(' ')[1]}</span>
           </h1>
-          <h5 className="eiei-text text-lg sm:text-2xl lg:text-[2rem] font-medium tracking-wider">
+          <h5 className="eiei-text md:text-body text-body-sm lg:text-h3 font-bold tracking-wider">
             Engineering Intelligence Empowering Industry
           </h5>
         </div>

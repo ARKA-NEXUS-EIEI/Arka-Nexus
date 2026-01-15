@@ -11,7 +11,7 @@ export default function ContactSection() {
     ];
 
     return (
-        <section className="min-h-screen bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] p-4 md:p-10">
+        <section className="min-h-screen p-4 md:p-10">  { /* bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] */ }
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 box-border">
                 
                 {/* Contact Left */}

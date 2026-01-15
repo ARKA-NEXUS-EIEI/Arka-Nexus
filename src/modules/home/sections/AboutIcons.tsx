@@ -14,7 +14,7 @@ export const VisionIcon = ({ isVisible }: IconProps) => {
         isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
       }`}
     >
-      <svg width={size} height={size} viewBox="0 0 100 100" style={{ color: tokens.colors.brand["blue-bg"] }}>
+      <svg width={size} height={size} viewBox="0 0 100 100" style={{ color: tokens.colors.brand["primary-blue"] }}>
         {/* Eye outline */}
         <path
           d="M10 50 C30 20, 70 20, 90 50 C70 80, 30 80, 10 50 Z"

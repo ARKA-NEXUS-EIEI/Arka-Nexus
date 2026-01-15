@@ -10,14 +10,12 @@ export default {
     extend: {
       colors: {
         ...tokens.colors,
-        brand: tokens.colors.brand,
-        neutral: tokens.colors.neutral,
       },
       spacing: tokens.spacing,
       fontSize: {
-        'mobile-link': tokens.fontSize['mobile-link'],
-        'nav-link': tokens.fontSize['nav-link'],
-        'dropdown-link': tokens.fontSize['dropdown-link'],
+        ...tokens.fontSize,
+        'h1-desktop': ['4rem', { lineHeight: '1.1', fontWeight: '800' }],
+        'h2-desktop': ['3rem', { lineHeight: '1.2', fontWeight: '700' }],
       },
       borderRadius: tokens.borderRadius,
       boxShadow: tokens.shadows,

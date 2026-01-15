@@ -25,8 +25,8 @@ export default function Footer() {
   if (!contact) return null;
 
   return (
-    <footer className="bg-brand-blue-bg pt-10 px-0 pb-0">
-      <div className="max-w-footer mx-auto px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1.5fr_2fr] gap-8 mb-8">
+    <footer className="bg-brand-primary-blue pt-10 px-0 pb-0">
+      <div className="max-w-arka mx-auto px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1.5fr_2fr] gap-8 mb-8">
         
         {/* Brand Section */}
         <div className="flex flex-col lg:items-center md:items-start">
@@ -39,7 +39,7 @@ export default function Footer() {
             />
           </Link>
 
-          <p className="text-neutral-textMuted text-lg leading-relaxed lg:text-center md:text-left mb-5">
+          <p className="text-neutral-textMuted text-body leading-relaxed lg:text-center md:text-left mb-5 font-semibold">
             Engineering Intelligence Empowering Industry
           </p>
 
@@ -55,11 +55,11 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-brand-primary text-xl font-semibold uppercase tracking-wider mb-4 lg:text-center">Links</h3>
+          <h3 className="text-brand-primary text-h3 font-bold uppercase tracking-wider mb-4 lg:text-center">Links</h3>
           <ul className="space-y-2 list-none p-0">
             {['Home', 'About', 'Services'].map((link) => (
               <li key={link} className="lg:text-center md:text-left">
-                <Link to={`/${link.toLowerCase()}`} className="text-neutral-textMuted hover:text-brand-primary transition-colors">
+                <Link to={`/${link.toLowerCase()}`} className="text-body-sm text-neutral-textMuted hover:text-brand-primary transition-colors">
                   {link}
                 </Link>
               </li>
@@ -69,26 +69,26 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h3 className="text-brand-primary text-xl font-semibold uppercase tracking-wider mb-4">Services</h3>
+          <h3 className="text-brand-primary text-h3 font-bold uppercase tracking-wider mb-4">Services</h3>
           <ul className="space-y-3 list-none p-0">
             <li className="flex items-center gap-2 group">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-primary flex-shrink-0 group-hover:scale-110 transition-transform">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
-              <Link to="/energy-audit" className="text-neutral-textMuted hover:text-brand-primary transition-colors">Energy Audit</Link>
+              <Link to="/energy-audit" className="text-body-sm text-neutral-textMuted hover:text-brand-primary transition-colors">Energy Audit</Link>
             </li>
             <li className="flex items-center gap-2 group">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-primary flex-shrink-0 group-hover:scale-110 transition-transform">
                 <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
               </svg>
-              <Link to="/power-quality" className="text-neutral-textMuted hover:text-brand-primary transition-colors">Power Quality Audit</Link>
+              <Link to="/power-quality" className="text-body-sm text-neutral-textMuted hover:text-brand-primary transition-colors">Power Quality Audit</Link>
             </li>
             <li className="flex items-center gap-2 group">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-primary flex-shrink-0 group-hover:scale-110 transition-transform">
                 <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" />
                 <path d="M8 12l2 2 4-4" />
               </svg>
-              <Link to="/harmonic-study" className="text-neutral-textMuted hover:text-brand-primary transition-colors">Harmonic Audit</Link>
+              <Link to="/harmonic-study" className="text-body-sm text-neutral-textMuted hover:text-brand-primary transition-colors">Harmonic Audit</Link>
             </li>
             <li className="flex items-center gap-2 group">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-primary flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -102,7 +102,7 @@ export default function Footer() {
                 <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
                 <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
               </svg>
-              <Link to="/solar-panel-study" className="text-neutral-textMuted hover:text-brand-primary transition-colors">Solar Plant Audit</Link>
+              <Link to="/solar-panel-study" className="text-body-sm text-neutral-textMuted hover:text-brand-primary transition-colors">Solar Plant Audit</Link>
             </li>
             <li className="flex items-center gap-2 group">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-primary flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -112,20 +112,20 @@ export default function Footer() {
                 <line x1="16" y1="17" x2="8" y2="17" />
                 <polyline points="10,9 9,9 8,9" />
               </svg>
-              <Link to="/thermal-study" className="text-neutral-textMuted hover:text-brand-primary transition-colors">Thermal Study</Link>
+              <Link to="/thermal-study" className="text-body-sm text-neutral-textMuted hover:text-brand-primary transition-colors">Thermal Study</Link>
             </li>
             <li className="flex items-center gap-2 group">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-primary flex-shrink-0 group-hover:scale-110 transition-transform">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
               </svg>
-              <Link to="/vibration-audit" className="text-neutral-textMuted hover:text-brand-primary transition-colors">Vibration Audit</Link>
+              <Link to="/vibration-audit" className="text-body-sm text-neutral-textMuted hover:text-brand-primary transition-colors">Vibration Audit</Link>
             </li>
             <li className="flex items-center gap-2 group">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-primary flex-shrink-0 group-hover:scale-110 transition-transform">
                 <path d="M9 12l2 2 4-4" />
                 <path d="M21 12c.552 0 1-.448 1-1V8a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v3c0 .552.448 1 1 1h18zM21 16c.552 0 1-.448 1-1v-1c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v1c0 .552.448 1 1 1h18z" />
               </svg>
-              <Link to="/industrial-safety-audit" className="text-neutral-textMuted hover:text-brand-primary transition-colors">Industrial Safety Audit</Link>
+              <Link to="/industrial-safety-audit" className="text-body-sm text-neutral-textMuted hover:text-brand-primary transition-colors">Industrial Safety Audit</Link>
             </li>
             <li className="flex items-center gap-2 group">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand-primary flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -133,22 +133,22 @@ export default function Footer() {
                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
                 <circle cx="12" cy="12" r="2" />
               </svg>
-              <Link to="/industrial-training" className="text-neutral-textMuted hover:text-brand-primary transition-colors">Industrial Training Program</Link>
+              <Link to="/industrial-training" className="text-body-sm text-neutral-textMuted hover:text-brand-primary transition-colors">Industrial Training Program</Link>
             </li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-brand-primary text-xl font-semibold uppercase tracking-wider mb-4">Contact Info</h3>
-          <ul className="space-y-4 list-none p-0">
+          <h3 className="text-brand-primary text-xl font-bold uppercase tracking-wider mb-4">Contact Info</h3>
+          <ul className="space-y-4 list-none p-0 text-body-sm">
             {contact.emails?.map((email, i) => (
               <li key={i} className="flex items-start gap-2">
                 <svg className="text-brand-primary mt-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                <span className="text-neutral-textMuted text-base break-all">{email}</span>
+                <span className="text-neutral-textMuted text-body-sm break-all">{email}</span>
               </li>
             ))}
 
@@ -157,7 +157,7 @@ export default function Footer() {
                 <svg className="text-brand-primary mt-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
-                <span className="text-neutral-textMuted text-base break-all">{num}</span>
+                <span className="text-neutral-textMuted text-body-sm break-all">{num}</span>
               </li>
             ))}
 
@@ -167,7 +167,7 @@ export default function Footer() {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span className="text-neutral-textMuted text-base">{contact.address}</span>
+                <span className="text-neutral-textMuted text-body-sm">{contact.address}</span>
               </li>
             )}
           </ul>
@@ -175,7 +175,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-neutral-border py-6 mt-10 bg-black/10">
-        <p className="text-center text-neutral-textMuted text-base">
+        <p className="text-center text-neutral-textMuted text-body-sm">
           © 2025 Arka Nexus. All rights reserved.
         </p>
       </div>

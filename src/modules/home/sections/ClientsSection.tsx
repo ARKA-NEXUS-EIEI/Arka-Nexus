@@ -39,10 +39,10 @@ export default function ClientsSection() {
                 pointerEvents: 'none'
             }} />
 
-            <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-7xl">
+            <div className="container mx-auto px-safe-x relative z-10 max-w-arka">
                 {/* Main Client Count Title */}
                 <motion.h1
-                    className="blw-50-clients text-3xl md:text-5xl font-extrabold text-center mb-1 tracking-tight"
+                    className="blw-50-clients text-h2 md:text-h2-desktop font-bold text-center mb-2 tracking-tight"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
@@ -52,7 +52,7 @@ export default function ClientsSection() {
 
                 {/* Section Title */}
                 <motion.h2
-                    className="client-title-underline text-xl md:text-3xl font-bold text-center mb-12 text-brand-dark leading-tight relative pb-4"
+                    className="client-title-underline text-h3 md:text-h2 font-bold text-center mb-8 text-brand-dark leading-tight relative pb-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
@@ -66,7 +66,7 @@ export default function ClientsSection() {
                         <Marquee direction="left" speed={40} gradient={false}>
                             {clientLogos.topRowLogos.map((logo, index) => (
                                 <div key={index}
-                                    className="bg-white/95 p-4 mx-4 md:mx-6 flex items-center justify-center rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 backdrop-blur-md border border-white/30 group"
+                                    className="bg-white/95 p-4 mx-4 md:mx-6 flex items-center justify-center rounded-card shadow-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300 backdrop-blur-md border border-white/30 group"
                                 >
                                     <img
                                         src={urlFor(logo).url()}
@@ -86,7 +86,7 @@ export default function ClientsSection() {
                         <Marquee direction="right" speed={40} gradient={false}>
                             {clientLogos.bottomRowLogos.map((logo, index) => (
                                 <div key={index}
-                                    className="bg-white/95 p-3 md:p-4 mx-4 md:mx-6 flex items-center justify-center rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 backdrop-blur-md border border-white/30 group"
+                                    className="bg-white/95 p-3 md:p-4 mx-4 md:mx-6 flex items-center justify-center rounded-card shadow-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300 backdrop-blur-md border border-white/30 group"
                                 >
                                     <img
                                         src={urlFor(logo).url()}
