@@ -4,6 +4,7 @@ import HomePage from "../modules/home/HomePage";
 import AboutPage from "../modules/about/AboutPage";
 import ServicesLandingPage from "../modules/services/pages/ServiceLandingPage";
 import ServicesPage from "../modules/services/pages/ServicePage";
+import InstrumentsPage from "../modules/instruments/pages/InstrumentsPage";
 
 export const routes: RouteObject[] = [
     {
@@ -45,5 +46,15 @@ export const routes: RouteObject[] = [
                 element: <ServicesPage />,
             },
         ],
-    }
+    },
+    {
+        path: "/instruments",
+        element: <MainLayout />,
+        children: [
+            {
+                index: true,
+                element: <InstrumentsPage />,
+            },
+        ],
+    },
 ];
