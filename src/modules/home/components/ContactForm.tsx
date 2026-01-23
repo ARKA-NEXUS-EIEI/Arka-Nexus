@@ -132,7 +132,7 @@ const ContactForm = ({ onSuccess }: Props) => {
         <div className="relative overflow-hidden p-6 rounded-xl text-center text-brand-primary mb-2">
           {/* Shimmer Effect Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-[shimmer_3s_infinite] pointer-events-none" />
-          <h1 className="relative z-10 text-2xl md:text-3xl font-bold tracking-tight">
+          <h1 className="relative z-10 text-h3 md:text-3xl font-bold tracking-tight">
             Get In Touch With Our Engineering Experts
           </h1>
         </div>

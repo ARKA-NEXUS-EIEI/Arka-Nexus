@@ -1,4 +1,4 @@
-import { tokens } from "./src/styles/tailwind.token";
+import { tokens } from "./src/styles/tailwind.tokens";
 
 /** @type {import('tailwindcss').Config} */
 export default {

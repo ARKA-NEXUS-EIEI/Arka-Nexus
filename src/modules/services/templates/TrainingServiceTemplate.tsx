@@ -79,7 +79,7 @@ const InfoBlock = ({ title, items, isNumbered = false }: { title: string; items?
       className="space-y-8"
     >
       <div className="relative inline-block">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#e66a1c]">{title}</h2>
+        <h2 className="text-h3 md:text-3xl font-bold text-[#e66a1c]">{title}</h2>
         <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-gradient-to-r from-[#e66a1c] to-transparent rounded-full" />
       </div>
 

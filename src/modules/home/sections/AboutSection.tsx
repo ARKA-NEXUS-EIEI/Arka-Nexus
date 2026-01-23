@@ -111,7 +111,7 @@ export default function AboutSection() {
                 <div className="flex-shrink-0">
                   <VisionIcon isVisible={isVisible} />
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-slate-800">Our Vision</h3>
+                <h3 className="text-xl lg:text-h3 font-bold text-slate-800">Our Vision</h3>
               </div>
               <p className="text-slate-500 leading-relaxed text-base lg:text-base text-justify md:text-left">
                 To lead the global industrial market with reliable technological and ethical business practices, setting a benchmark for excellence in innovation and sustainability.              </p>
@@ -123,7 +123,7 @@ export default function AboutSection() {
               ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12 scale-95'}`}>
               <div className="flex flex-row md:flex-row items-center gap-4 mb-4 text-center md:text-left">
                 <MissionIcon isVisible={isVisible} />
-                <h3 className="text-xl lg:text-2xl font-bold text-slate-800">Our Mission</h3>
+                <h3 className="text-xl lg:text-h3 font-bold text-slate-800">Our Mission</h3>
               </div>
               <p className="text-slate-500 leading-relaxed text-base lg:text-base text-justify md:text-left">
                 To deliver consultancy services, comprehensive training, and innovative solutions to resolve industrial challenges and enhance operational efficiency for sustainable societal growth.              </p>

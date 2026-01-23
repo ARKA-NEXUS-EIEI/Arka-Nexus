@@ -130,7 +130,7 @@ export default function GridMotion() {
                 const content = combinedItems[rowIndex * 7 + itemIndex];
                 return (
                   <div key={itemIndex} className="relative">
-                    <div className="relative w-full h-full overflow-hidden rounded-[10px] bg-[#111]/60 backdrop-blur-[2px] flex items-center justify-center text-neutral-white text-2xl">
+                    <div className="relative w-full h-full overflow-hidden rounded-[10px] bg-[#111]/60 backdrop-blur-[2px] flex items-center justify-center text-neutral-white text-h3">
                       {typeof content === 'string' && content.startsWith('http') ? (
                         <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: `url(${content})` }} />
                       ) : (

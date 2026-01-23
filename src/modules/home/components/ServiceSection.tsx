@@ -107,11 +107,11 @@ export default function ServiceSection() {
                                 <img
                                     src={service.image}
                                     alt={service.title}
-                                    className="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-105"
+                                    className="w-full h-full object-contain p-1 transition-transform duration-300 group-hover:scale-105"
                                 />
                             </div>
 
-                            <div className="p-2 text-center border-t border-gray-100">
+                            <div className="pb-2 text-center border-t border-gray-100">
                                 <h3 className="text-brand-dark font-bold text-xs sm:text-sm md:text-base leading-tight">
                                     {service.title}
                                 </h3>

@@ -115,7 +115,7 @@ export default function AboutTabsSection() {
                 {activeTab === 'mission' && (
                     <div className="animate-fadeIn relative w-full h-full flex flex-col justify-center min-h-inherit space-y-10 z-10 lg:px-10">
                         <div>
-                            <h2 className="text-2xl font-bold text-brand-primary mb-4 border-b border-[#fca74d]/20 pb-2 uppercase tracking-wide">
+                            <h2 className="text-h3 font-bold text-brand-primary mb-section-y border-b border-[#fca74d]/20 pb-2 uppercase tracking-wide lg:text-left">
                                 Vision
                             </h2>
                             <p className="text-neutral-white text-base md:text-lg text-justify leading-relaxed">
@@ -124,7 +124,7 @@ export default function AboutTabsSection() {
                             </p>
                         </div>
                         <div>
-                            <h2 className="text-2xl font-bold text-brand-primary mb-4 border-b border-[#fca74d]/20 pb-2 uppercase tracking-wide">
+                            <h2 className="text-h3 font-bold text-brand-primary mb-section-y border-b border-[#fca74d]/20 pb-2 uppercase tracking-wide lg:text-left">
                                 Mission
                             </h2>
                             <p className="text-neutral-white text-base md:text-lg text-justify leading-relaxed">
@@ -139,7 +139,7 @@ export default function AboutTabsSection() {
                 {/* Objectives */}
                 {activeTab === 'objectives' && (
                     <div className="animate-fadeIn">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-6">Our Objectives</h2>
+                        <h2 className="text-h3 font-bold text-brand-primary mb-section-y lg:text-left">Our Objectives</h2>
                         <ul className="flex flex-col gap-4">
                             {[
                                 "To provide expert industrial consultancy to optimize and enhance industrial process.",
@@ -161,7 +161,7 @@ export default function AboutTabsSection() {
                 {/* USPs */}
                 {activeTab === 'usp' && (
                     <div className="animate-fadeIn">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-8">ARKA Unique Selling Points</h2>
+                        <h2 className="text-h3 font-bold text-brand-primary mb-section-y text-center">ARKA Unique Selling Points</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
                             {[
                                 { title: "Expert Consultants", desc: "Experienced, specialized and certified industrial consultants with advanced, state-of-the-art equipment.", icon: <Award size={32} /> },
@@ -187,7 +187,7 @@ export default function AboutTabsSection() {
                 {/* Core Values */}
                 {activeTab === 'values' && (
                     <div className="animate-fadeIn">
-                        <h2 className="text-2xl font-bold text-brand-primary mb-8">Core Values</h2>
+                        <h2 className="text-h3 font-bold text-brand-primary mb-section-y text-center">Core Values</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
                                 { title: "Reliable Solutions", desc: "Consistently delivering dependable technological solutions", path: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" },

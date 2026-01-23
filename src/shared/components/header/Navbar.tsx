@@ -95,7 +95,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
             <li>
               <Link to="/" className={`flex items-center gap-2 px-4 py-3 rounded-nav-link text-nav-link transition-all font-medium
                 ${location.pathname === '/'
-                  ? 'text-brand-primary font-semibold'
+                  ? 'text-brand-primary'
                   : 'text-neutral-textMain hover:text-brand-primary'}`}>
                 Home
               </Link>

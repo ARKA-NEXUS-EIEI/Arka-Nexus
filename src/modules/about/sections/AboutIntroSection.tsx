@@ -29,7 +29,7 @@ export default function AboutIntroSection() {
           visibleSections.header ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[10px]'
         }`}
       >
-        <p className="text-xl md:text-2xl text-brand-primary font-bold uppercase text-center mb-4">
+        <p className="text-xl md:text-h3 text-brand-primary font-bold uppercase text-center mb-4">
           Innovating Industrial Excellence Since 2025
         </p>
       </div>

@@ -28,5 +28,6 @@ dist-ssr
 
 arka web-v2 copy
 info.txt
+extra/
 
 .env

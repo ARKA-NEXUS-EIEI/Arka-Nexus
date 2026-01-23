@@ -29,10 +29,10 @@ export const tokens = {
     'safe-x': '2rem',
     'dropdown-gap': '0.5rem',
     'card-gap': '1.5rem',
-    'section-y': '1rem',    // Vertical padding for all sections (80px)
-    'content-gap': '2rem',  // Gap between related elements (32px)
-    'grid-gap': '1.5rem',   // Standard gap for grids (24px)
-    'stack-gap': '1rem',    // Small stack gap for headers/text (16px)
+    'section-y': '1rem',    // Vertical padding for all sections 
+    'content-gap': '2rem',  // Gap between related elements 
+    'grid-gap': '1.5rem',   // Standard gap for grids
+    'stack-gap': '1rem',    // Small stack gap for headers/text
   },
   fontSize: {
     'h1': ['2.5rem', { lineHeight: '1.2', fontWeight: '800' }], // Mobile: 40px

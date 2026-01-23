@@ -1,4 +1,4 @@
-import { tokens } from "../../../styles/tailwind.token";
+import { tokens } from "../../../styles/tailwind.tokens";
 
 interface IconProps {
   isVisible: boolean;

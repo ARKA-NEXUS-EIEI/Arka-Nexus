@@ -124,7 +124,7 @@ const AuditServiceTemplate = ({ data }: Props) => {
                                         <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                                     </svg>
                                 </div>
-                                <h3 className="text-2xl font-bold text-[#e66a1c]">Key Steps Involved</h3>
+                                <h3 className="text-h3 font-bold text-[#e66a1c]">Key Steps Involved</h3>
                             </div>
                             <div className="bg-white border border-[#e4932a] rounded-2xl p-6 shadow-md">
                                 <ListBlock items={data.keySteps || []} />
@@ -145,7 +145,7 @@ const AuditServiceTemplate = ({ data }: Props) => {
                                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                     </svg>
                                 </div>
-                                <h3 className="text-2xl font-bold text-[#e66a1c]">Benefits of {data.title}</h3>
+                                <h3 className="text-h3 font-bold text-[#e66a1c]">Benefits of {data.title}</h3>
                             </div>
                             <div className="bg-gradient-to-br from-white to-[#faf0d1] border border-[#be6f14] rounded-2xl p-6 shadow-md">
                                 <ListBlock items={data.benefits || []} />

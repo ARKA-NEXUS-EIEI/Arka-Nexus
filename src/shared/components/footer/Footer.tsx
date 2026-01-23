@@ -44,10 +44,10 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-3">
-            <motion.a href="https://www.linkedin.com/company/arka-nexus/" whileHover={{ scale: 1.2 }} className="text-neutral-textMuted text-2xl hover:text-brand-primary transition-colors">
+            <motion.a href="https://www.linkedin.com/company/arka-nexus/" whileHover={{ scale: 1.2 }} className="text-neutral-textMuted text-h3 hover:text-brand-primary transition-colors">
               <FontAwesomeIcon icon={faLinkedin} />
             </motion.a>
-            <motion.a href="#" whileHover={{ scale: 1.2 }} className="text-neutral-textMuted text-2xl hover:text-brand-primary transition-colors">
+            <motion.a href="#" whileHover={{ scale: 1.2 }} className="text-neutral-textMuted text-h3 hover:text-brand-primary transition-colors">
               <FontAwesomeIcon icon={faInstagram} />
             </motion.a>
           </div>

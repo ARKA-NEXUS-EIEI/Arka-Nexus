@@ -76,7 +76,7 @@ export default function AboutTeamSection() {
 
                                 {/* Info */}
                                 <div className="space-y-2">
-                                    <h3 className="text-xl md:text-2xl font-bold text-[#1e3a8a] tracking-tight">
+                                    <h3 className="text-xl md:text-h3 font-bold text-[#1e3a8a] tracking-tight">
                                         {member.name}
                                     </h3>
                                     <h4 className="text-sm font-semibold text-[#e88011] uppercase tracking-widest">
@@ -108,7 +108,7 @@ export default function AboutTeamSection() {
                                 key={i} 
                                 className="text-center space-y-2 w-[calc(50%-1rem)] md:w-auto md:min-w-[160px] max-w-[280px] flex flex-col justify-center"
                             >
-                                <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-br from-[#e88011] to-blue-500 bg-clip-text text-transparent drop-shadow-sm">
+                                <div className="text-h3 md:text-3xl font-extrabold bg-gradient-to-br from-[#e88011] to-blue-500 bg-clip-text text-transparent drop-shadow-sm">
                                     {stat.number}
                                 </div>
                                 <div className="text-neutral-white text-sm md:text-base font-medium opacity-90 leading-tight tracking-wide">
