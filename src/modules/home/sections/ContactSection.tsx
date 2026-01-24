@@ -1,4 +1,4 @@
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../../../shared/components/contact/components/ContactForm";
 import AN from '@/assets/videos/AN.mp4';
 
 export default function ContactSection() {

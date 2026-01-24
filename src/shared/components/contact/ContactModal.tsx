@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import ContactForm from "../../../modules/home/components/ContactForm";
+import ContactForm from "./components/ContactForm";
 
 type Props = {
   onClose: () => void;
