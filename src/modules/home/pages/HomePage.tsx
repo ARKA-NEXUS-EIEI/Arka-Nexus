@@ -1,4 +1,4 @@
-import GridMotion from "../components/GridMotion";
+import GridMotion from "../sections/GridMotion";
 import AboutSection from "../sections/AboutSection";
 import CoreValuesSection from "../sections/CoreValuesSection";
 import ServiceSection from "../../services/sections/ServiceSection";

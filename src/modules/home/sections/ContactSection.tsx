@@ -1,14 +1,18 @@
 import ContactForm from "../../../shared/components/contact/components/ContactForm";
 import AN from '@/assets/videos/AN.mp4';
+import { getHomeContent } from "../providers/home.provider";
+import type { HomeContent } from "../content/home.content";
+import { useEffect, useState } from "react";
 
 export default function ContactSection() {
-    const services = [
-        "Comprehensive energy auditing",
-        "Advanced power quality analysis",
-        "Harmonic distortion assessment",
-        "Thermal imaging diagnostics",
-        "Vibration analysis & monitoring"
-    ];
+    const [content, setContent] = useState<HomeContent | null>(null);
+
+    // Fetch content
+    useEffect(() => {
+        getHomeContent().then(setContent);
+    }, []);
+
+    if (!content) return null;
 
     return (
         <section className="min-h-screen p-4 md:p-10">  { /* bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] */ }
@@ -31,15 +35,15 @@ export default function ContactSection() {
                     </div>
 
                     <h2 className="text-3xl md:text-[2rem] mb-6 text-brand-primary font-bold leading-[1.1] tracking-tight text-center">
-                        Empowering Your Industry Through Engineering Excellence
+                        {content.contact.title}
                     </h2>
                     
                     <p className="text-[1.07rem] text-neutral-textMain leading-[1.7] mb-8 text-center">
-                        Ensure optimal performance and reliability of your electrical systems with our comprehensive audit and analysis services. Deep technical expertise meets intelligent solutions.
+                        {content.contact.description}
                     </p>
 
                     <ul className="space-y-0">
-                        {services.map((service, index) => (
+                        {content.contact.services.map((service, index) => (
                             <li key={index} className="py-3 text-neutral-textMain text-[1.05rem] flex items-center leading-relaxed">
                                 <span className="mr-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-secondary text-xs font-bold text-brand-dark">
                                     ✓
