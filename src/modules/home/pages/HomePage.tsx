@@ -1,10 +1,10 @@
-import GridMotion from "../sections/GridMotion";
-import AboutSection from "../sections/AboutSection";
-import CoreValuesSection from "../sections/CoreValuesSection";
-import ServiceSection from "../../services/sections/ServiceSection";
 import { servicesLandingContent } from "../../services/content/servicesLanding.content";
+import ServiceSection from "../../services/sections/ServiceSection";
+import AboutSection from "../sections/AboutSection";
 import ClientsSection from "../sections/ClientsSection";
 import ContactSection from "../sections/ContactSection";
+import CoreValuesSection from "../sections/CoreValuesSection";
+import GridMotion from "../sections/GridMotion";
 
 export default function HomePage() {
   return (

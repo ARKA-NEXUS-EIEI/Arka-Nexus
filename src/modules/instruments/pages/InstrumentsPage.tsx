@@ -1,10 +1,10 @@
-import { useInstrumentsPage } from "../hooks/useInstrumentsPage";
-import InstrumentsHero from "../sections/InstrumentsHero";
-import InstrumentsGrid from "../sections/InstrumentsGrid";
-import InstrumentsGallery from "../sections/InstrumentsGallery";
-import "./instruments.css";
-import InstrumentsSkeleton from "../skeleton/instrumentsSkeleton";
 import NotFoundPage from "../../../shared/not-found/NotFoundPage";
+import { useInstrumentsPage } from "../hooks/useInstrumentsPage";
+import InstrumentsGallery from "../sections/InstrumentsGallery";
+import InstrumentsGrid from "../sections/InstrumentsGrid";
+import InstrumentsHero from "../sections/InstrumentsHero";
+import InstrumentsSkeleton from "../skeleton/instrumentsSkeleton";
+import "./instruments.css";
 
 const InstrumentsPage = () => {
   const { data, visible, scrollProgress, loading } = useInstrumentsPage();

@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import "./GridMotion.css";
+import { useEffect, useRef, useState } from "react";
+
 import bgVideo from "@/assets/videos/header_vdo.mp4";
+
 import { getHomeContent } from "../providers/home.provider";
+
 import type { HomeContent } from "../content/home.content";
+import "./GridMotion.css";
 
 export default function GridMotion() {
   const [content, setContent] = useState<HomeContent | null>(null);
@@ -48,7 +51,7 @@ export default function GridMotion() {
               onComplete: () => {
                 const el = document.querySelector(
                   ".gridMotion-container",
-                ) as HTMLElement | null;
+                );
                 if (el) el.style.display = "none";
               },
             });

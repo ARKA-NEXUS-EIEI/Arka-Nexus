@@ -1,5 +1,6 @@
-import { motion, easeInOut, type Variants } from "framer-motion";
+import { easeInOut, motion, type Variants } from "framer-motion";
 import { Link } from "react-router-dom";
+
 import type { ServiceCardItem } from "../content/servicesLanding.content";
 
 interface Props {

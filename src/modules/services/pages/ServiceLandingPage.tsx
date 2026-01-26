@@ -1,16 +1,18 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import ImageMapper from "react-img-mapper";
-import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-import ServiceSection from "../sections/ServiceSection";
-import arrow from "@/assets/images/services/arrow.png";
 import img from "@/assets/images/logos/service_img.png";
-import { SERVICES_MAP as MAP } from "../config/services.map";
+import arrow from "@/assets/images/services/arrow.png";
 
-import { getServicesLandingContent } from "../providers/servicesLanding.provider";
-import type { ServicesLandingContent } from "../content/servicesLanding.content";
+
 import NotFoundPage from "../../../shared/not-found/NotFoundPage";
+import { SERVICES_MAP as MAP } from "../config/services.map";
+import { getServicesLandingContent } from "../providers/servicesLanding.provider";
+import ServiceSection from "../sections/ServiceSection";
+
+import type { ServicesLandingContent } from "../content/servicesLanding.content";
 
 const fadeSlide = {
   hidden: { opacity: 0, x: -30 },

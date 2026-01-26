@@ -1,11 +1,12 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import arka_logo from "@/assets/images/logos/arka_Nexus.png";
-import { getFooterData } from "../../../core/services/sanity/footer.service";
+
+import { getFooterData } from "../../../core/services/sanity/services/footer.service";
 
 type ContactDetails = {
   emails?: string[];

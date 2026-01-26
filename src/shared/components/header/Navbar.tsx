@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import arka_logo from "@/assets/images/logos/arka_Nexus.png";
-import training from "@/assets/images/nav_img/training.png";
 import energy from "@/assets/images/nav_img/energy_audit.png";
 import harmonic from "@/assets/images/nav_img/harmonic_audit.jpg";
 import solar from "@/assets/images/nav_img/solar.jpg";
+import training from "@/assets/images/nav_img/training.png";
 import vibration from "@/assets/images/nav_img/vibration.jpg";
 
 const serviceImages: Record<string, string> = {

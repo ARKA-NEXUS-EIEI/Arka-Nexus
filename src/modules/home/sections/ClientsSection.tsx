@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
-import { fetchClientLogos } from "../../../core/services/sanity/clients.service";
+
 import { urlFor } from "../../../core/services/client";
+import { fetchClientLogos } from "../../../core/services/sanity/services/clients.service";
 import "./ClientsSection.css";
 
 type ClientLogos = {

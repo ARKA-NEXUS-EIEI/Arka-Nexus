@@ -1,5 +1,7 @@
-import type { SnapshotImage } from "../hooks/useSnapshots";
 import { MasonryItem } from "./MasonryItem";
+
+import type { SnapshotImage } from "../hooks/useSnapshots";
+
 
 interface MasonryProps {
   data: SnapshotImage[];

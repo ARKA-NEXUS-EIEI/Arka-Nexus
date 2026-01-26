@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+import { fetchCoreValues } from "../../../core/services/sanity/services/coreValues.service";
 import "./CoreValuesSection.css";
-import { fetchCoreValues } from "../../../core/services/sanity/coreValues.service";
 
 export default function CoreValuesSection() {
   const [values, setValues] = useState<any[]>([]);

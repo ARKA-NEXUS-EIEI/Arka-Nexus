@@ -1,5 +1,5 @@
-import Masonry from "../sections/Masonry";
 import { useSnapshots, type SnapshotsData } from "../hooks/useSnapshots";
+import Masonry from "../sections/Masonry";
 
 const SnapshotsPage = () => {
   const data: SnapshotsData | null = useSnapshots();

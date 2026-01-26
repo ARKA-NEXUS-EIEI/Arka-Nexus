@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
+
+import NotFoundPage from "../../../shared/not-found/NotFoundPage";
 import { useServiceData } from "../hooks/useServiceData";
+import AuditServiceSkeleton from "../skeleton/AuditServiceSkeleton";
+import TrainingServiceSkeleton from "../skeleton/TrainingServiceSkeleton";
 import AuditServiceTemplate from "../templates/AuditServiceTemplate";
 import TrainingServiceTemplate from "../templates/TrainingServiceTemplate";
-import NotFoundPage from "../../../shared/not-found/NotFoundPage";
-import TrainingServiceSkeleton from "../skeleton/TrainingServiceSkeleton";
-import AuditServiceSkeleton from "../skeleton/AuditServiceSkeleton";
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();

@@ -1,10 +1,11 @@
 // core/hooks/useServiceData.ts
 import { useEffect, useState } from "react";
-import { SERVICE_MAP } from "../config/serviceTemplateMap";
+
 import {
   getAuditServiceData,
   getTrainingServiceData,
-} from "../../../core/services/sanity/services.service";
+} from "../../../core/services/sanity/services/services.service";
+import { SERVICE_MAP } from "../config/serviceTemplateMap";
 
 export const useServiceData = (slug: string) => {
   const [data, setData] = useState<any>(null);

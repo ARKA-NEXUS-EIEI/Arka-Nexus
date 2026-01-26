@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import {
   sendNotificationEmail,
   sendThankYouEmail,
 } from "../../../../core/services/email/email.service";
+import { validateContactForm } from "../utils/contact.validation";
+
 import type {
   ContactFormData,
   ContactFormErrors,
 } from "../types/contact.types";
-import { validateContactForm } from "../utils/contact.validation";
+import type React from "react";
 
 export const useContactForm = (onSuccess?: () => void) => {
   const [formData, setFormData] = useState<ContactFormData>({

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { getLeadershipTeam } from "../../../core/services/sanity/leadershipTeam.service";
-import type { LeadershipTeamData } from "../../../core/services/sanity/leadershipTeam.types";
+
+import { getLeadershipTeam } from "../../../core/services/sanity/services/leadershipTeam.service";
+
+import type { LeadershipTeamData } from "../../../core/services/sanity/types/leadershipTeam.types";
 
 export default function AboutTeamSection() {
   const [team, setTeam] = useState<LeadershipTeamData | null>(null);

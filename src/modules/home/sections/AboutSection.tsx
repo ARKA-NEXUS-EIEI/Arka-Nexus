@@ -1,12 +1,20 @@
-import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import "./AboutSection.css";
-import { VisionIcon, MissionIcon } from "./AboutIcons";
-import sampleVideo from "@/assets/videos/eiei.mp4";
-import Brochure from "@/assets/docs/Brochure.pdf";
+import { useEffect, useRef, useState } from "react";
+
 import { getHomeContent } from "../providers/home.provider";
+
+import { MissionIcon, VisionIcon } from "./AboutIcons";
+
 import type { HomeContent } from "../content/home.content";
+
+
+import "./AboutSection.css";
+import React from "react";
+
+import Brochure from "@/assets/docs/Brochure.pdf";
+import sampleVideo from "@/assets/videos/eiei.mp4";
+
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
   const [content, setContent] = useState<HomeContent | null>(null);

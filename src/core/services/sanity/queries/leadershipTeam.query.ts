@@ -6,7 +6,7 @@ export const LEADERSHIP_TEAM_QUERY = `
     name,
     role,
     description,
-    "photoUrl": photo.asset->url
+    photo[]
   },
   stats[]{
     number,

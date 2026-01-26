@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { getInstruments } from "../../../core/services/sanity/instruments.service";
+
+import { getInstruments } from "../../../core/services/sanity/services/instruments.service";
 
 export const useInstrumentsPage = () => {
   const [data, setData] = useState<any>(null);

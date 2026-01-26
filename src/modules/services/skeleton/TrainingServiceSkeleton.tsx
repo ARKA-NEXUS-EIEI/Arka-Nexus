@@ -1,6 +1,6 @@
 import SkeletonBox from "../../../shared/ui/skeleton/SkeletonBox";
-import SkeletonText from "../../../shared/ui/skeleton/SkeletonText";
 import SkeletonCircle from "../../../shared/ui/skeleton/SkeletonCircle";
+import SkeletonText from "../../../shared/ui/skeleton/SkeletonText";
 
 const TrainingServiceSkeleton = () => {
   return (

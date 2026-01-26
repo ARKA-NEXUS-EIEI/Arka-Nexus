@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
 import { Download } from "lucide-react";
+import { useEffect, useState } from "react";
+
 import Brochure from "@/assets/docs/Brochure.pdf";
-import { getAboutContent } from "../providers/about.provider";
+
 import NotFoundPage from "../../../shared/not-found/NotFoundPage";
+import { getAboutContent } from "../providers/about.provider";
 
 export default function AboutIntroSection() {
   const [content, setContent] = useState<any>(null);

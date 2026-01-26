@@ -1,5 +1,5 @@
-import { motion, easeOut } from "framer-motion";
-import { Shield, GraduationCap, CheckCircle2 } from "lucide-react";
+import { easeOut, motion } from "framer-motion";
+import { CheckCircle2, GraduationCap, Shield } from "lucide-react";
 
 type Props = {
   data: {

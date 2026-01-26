@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import ListBlock from "../sections/ListBlock";
+
 import AuditSteps from "../sections/AuditSteps";
+import ListBlock from "../sections/ListBlock";
 
 type Props = {
   data: {

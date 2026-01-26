@@ -1,8 +1,11 @@
-import ContactForm from "../../../shared/components/contact/components/ContactForm";
-import AN from "@/assets/videos/AN.mp4";
-import { getHomeContent } from "../providers/home.provider";
-import type { HomeContent } from "../content/home.content";
 import { useEffect, useState } from "react";
+
+import AN from "@/assets/videos/AN.mp4";
+
+import ContactForm from "../../../shared/components/contact/components/ContactForm";
+import { getHomeContent } from "../providers/home.provider";
+
+import type { HomeContent } from "../content/home.content";
 
 export default function ContactSection() {
   const [content, setContent] = useState<HomeContent | null>(null);

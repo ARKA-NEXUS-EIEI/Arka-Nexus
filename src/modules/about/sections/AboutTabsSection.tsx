@@ -1,9 +1,11 @@
+import { Award, ChevronRight, Heart, Target, Users } from "lucide-react";
 import { useEffect, useRef, useState, type SetStateAction } from "react";
-import { ChevronRight, Target, Award, Users, Heart } from "lucide-react";
 import { useLocation } from "react-router-dom";
-import { getAboutContent } from "../providers/about.provider";
+
 import type { AboutContent } from "../content/about.content";
+
 import "../pages/AboutPage.css";
+import { getAboutContent } from "../providers/about.provider";
 
 export default function AboutTabsSection() {
   const location = useLocation();

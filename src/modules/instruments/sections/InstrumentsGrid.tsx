@@ -1,12 +1,12 @@
 import {
-  Database,
   Activity,
-  Thermometer,
-  Zap,
-  Wind,
-  Settings,
-  Search,
+  Database,
   Music,
+  Search,
+  Settings,
+  Thermometer,
+  Wind,
+  Zap,
 } from "lucide-react";
 import "../pages/instruments.css";
 
