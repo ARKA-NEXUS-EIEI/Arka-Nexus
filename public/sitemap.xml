@@ -24,19 +24,9 @@
     <changefreq>weekly</changefreq>
   </url>
 
-  <!-- Individual Service Pages -->
-  <url><loc>https://arkaxus.com/services/energy-audit</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://arkaxus.com/services/power-quality</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://arkaxus.com/services/harmonic-study</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://arkaxus.com/services/solar-panel-study</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://arkaxus.com/services/thermal-study</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://arkaxus.com/services/vibration-audit</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://arkaxus.com/services/industrial-safety-audit</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://arkaxus.com/services/industrial-training</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-
   <!-- Snap Shots -->
   <url>
-    <loc>https://arkaxus.com//snapshots</loc>
+    <loc>https://arkaxus.com/snapshots</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>

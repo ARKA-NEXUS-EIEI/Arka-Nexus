@@ -1,12 +1,71 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ARKA NEXUS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical redirect: www → non-www -->
+  <script>
+    if (location.hostname === "www.arkaxus.com") {
+      location.replace(location.href.replace("www.", ""));
+    }
+  </script>
+
+  <!-- Primary SEO -->
+  <title>Arka Nexus | Engineering Intelligence Empowering Industry</title>
+  <meta name="description"
+    content="Arka Nexus delivers consultancy services, comprehensive training, and innovative industrial solutions to enhance operational efficiency and sustainable societal growth.">
+  <meta name="keywords"
+    content="Arka Nexus, energy audit, industrial consultancy, engineering intelligence, sustainability">
+  <meta name="author" content="Arka Nexus">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://arkaxus.com/" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arkaxus.com/">
+  <meta property="og:title" content="Arka Nexus | Engineering Intelligence Empowering Industry">
+  <meta property="og:description"
+    content="Arka Nexus empowers industries with intelligent engineering, sustainable consultancy, and transformative training solutions.">
+  <meta property="og:image" content="https://arkaxus.com/android-chrome-512x512.png">
+  <meta property="og:site_name" content="Arka Nexus">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arka Nexus | Engineering Intelligence Empowering Industry">
+  <meta name="twitter:description"
+    content="Arka Nexus delivers consultancy services and intelligent engineering solutions for sustainable industrial growth.">
+
+  <!-- Performance: GA preconnect -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0D9RBSWNL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X0D9RBSWNL');
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>

@@ -1,0 +1,12 @@
+/* TEAM */
+Company: Arka Nexus
+Website: https://arkaxus.com
+Location: India
+
+/* TECHNOLOGY */
+Frontend: React + Vite
+Styling: Tailwind CSS
+Animations: GSAP, Framer Motion
+
+/* PURPOSE */
+Engineering Intelligence Empowering Industry
