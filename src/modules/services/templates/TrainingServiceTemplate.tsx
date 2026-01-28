@@ -104,14 +104,14 @@ const HeroSection = ({
 
             {/* The Main Icon Card */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-12 shadow-2xl backdrop-blur-xl">
+              <div className="relative rounded-[2.5rem] border border-neutral-white/10 bg-gradient-to-br from-neutral-white/10 to-transparent p-12 shadow-2xl backdrop-blur-xl">
                 {/* Pulsing Light behind Icon */}
                 <div className="absolute inset-0 animate-pulse rounded-full bg-brand-primary/10 blur-2xl" />
 
                 {variant === "shield" ? (
                   <Shield
                     size={100}
-                    className="relative z-10 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                    className="relative z-10 text-neutral-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                   />
                 ) : (
                   <GraduationCap
@@ -162,7 +162,7 @@ const InfoBlock = ({
         {items.map((item, i) => (
           <div
             key={i}
-            className="group flex items-center gap-4 rounded-r-xl border-l-4 border-brand-primary bg-white/5 p-4 transition-all hover:bg-white/10"
+            className="group flex items-center gap-4 rounded-r-xl border-l-4 border-brand-primary bg-neutral-white/5 p-4 transition-all hover:bg-neutral-white/10"
           >
             {isNumbered ? (
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-primary text-body-sm font-bold text-black">
@@ -185,7 +185,7 @@ const InfoBlock = ({
 
 const TrainingServiceTemplate = ({ data }: Props) => {
   return (
-    <div className="min-h-screen bg-[#020617] text-neutral-white">
+    <div className="text-neutral-neutral-white min-h-screen bg-[#020617]">
       {/* Hero with dynamic variant and geometric shapes */}
       <HeroSection
         title={data.title}

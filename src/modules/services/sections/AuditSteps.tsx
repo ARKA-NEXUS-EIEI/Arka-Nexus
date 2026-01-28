@@ -47,12 +47,12 @@ const AuditSteps = ({ steps = [], images = [] }: Props) => {
                   className={`relative cursor-pointer rounded-lg border-l-[3px] p-3 transition-all duration-500 ${
                     isActive
                       ? "translate-x-2 border-brand-primary bg-brand-primary/10"
-                      : "border-white/10 bg-transparent opacity-50 hover:opacity-100"
+                      : "border-neutral-white/10 bg-transparent opacity-50 hover:opacity-100"
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <span
-                      className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-card text-body-sm font-bold ${isActive ? "bg-brand-primary text-black" : "bg-white/10 text-white"}`}
+                      className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-card text-body-sm font-bold ${isActive ? "bg-brand-primary text-black" : "bg-neutral-white/10 text-neutral-white"}`}
                     >
                       {index + 1}
                     </span>
@@ -90,7 +90,7 @@ const AuditSteps = ({ steps = [], images = [] }: Props) => {
                 {images.map((_, i) => (
                   <div
                     key={i}
-                    className={`h-1 rounded-full transition-all duration-500 ${i === activeIndex ? "w-6 bg-brand-primary" : "w-1.5 bg-white/40"}`}
+                    className={`h-1 rounded-full transition-all duration-500 ${i === activeIndex ? "w-6 bg-brand-primary" : "w-1.5 bg-neutral-white/40"}`}
                   />
                 ))}
               </div>

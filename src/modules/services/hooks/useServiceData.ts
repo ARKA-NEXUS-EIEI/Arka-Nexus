@@ -24,7 +24,7 @@ export const useServiceData = (slug: string) => {
         ? getAuditServiceData
         : getTrainingServiceData;
 
-    fetcher(config.sanityType)
+    fetcher(config.serviceKey)
       .then((response) => {
         const elapsed = performance.now() - start;
         const minDelay = 500;

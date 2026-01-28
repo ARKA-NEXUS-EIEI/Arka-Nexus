@@ -1,5 +1,5 @@
-export const auditServiceQuery = (type: string) => `
-*[_type == "${type}"][0]{
+export const auditServiceQuery = () => `
+*[_type == "auditService" && serviceKey == $serviceKey][0]{
   title,
   description,
   "images": images[].asset->url,

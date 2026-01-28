@@ -13,7 +13,7 @@ const ContactAlerts = ({ showSuccess, showError }: Props) => (
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
-          className="fixed left-1/2 top-10 z-[10000] -translate-x-1/2 rounded-full bg-status-success px-6 py-3 text-white shadow-xl"
+          className="fixed left-1/2 top-10 z-[10000] -translate-x-1/2 rounded-full bg-status-success px-6 py-3 text-neutral-white shadow-xl"
         >
           Request Submitted Successfully!
         </motion.div>
@@ -26,7 +26,7 @@ const ContactAlerts = ({ showSuccess, showError }: Props) => (
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
-          className="fixed left-1/2 top-10 z-[10000] -translate-x-1/2 rounded-full bg-status-error px-6 py-3 text-white shadow-xl"
+          className="fixed left-1/2 top-10 z-[10000] -translate-x-1/2 rounded-full bg-status-error px-6 py-3 text-neutral-white shadow-xl"
         >
           Failed to submit. Please try again.
         </motion.div>

@@ -60,9 +60,9 @@ function ServiceDetails() {
       <img
         src={arrow}
         alt="arrow"
-        className="ml-0 mr-4 block h-auto w-full max-w-[50px] rounded-full bg-white/80 lg:ml-8 lg:mr-3"
+        className="ml-0 mr-4 block h-auto w-full max-w-[50px] rounded-full bg-neutral-white/80 lg:ml-8 lg:mr-3"
       />
-      <p className="text-body text-white/30">
+      <p className="text-body text-neutral-white/30">
         Click on the image to explore more...
       </p>
     </motion.div>

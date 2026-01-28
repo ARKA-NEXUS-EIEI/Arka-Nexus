@@ -3,7 +3,7 @@ import SkeletonText from "../../../shared/ui/skeleton/SkeletonText";
 
 const InstrumentsSkeleton = () => {
   return (
-    <div className="relative bg-[#020617] pb-8 pt-24 text-white">
+    <div className="relative bg-[#020617] pb-8 pt-24 text-neutral-white">
       {/* ================= HERO SKELETON ================= */}
       <section className="relative overflow-hidden py-8">
         <div className="mx-auto mt-[100px] grid max-w-[1200px] grid-cols-1 items-center gap-5 px-5 md:grid-cols-[2fr_1fr]">

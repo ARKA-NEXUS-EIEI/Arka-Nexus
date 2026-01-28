@@ -20,11 +20,11 @@ export default function ContactSection() {
       {/* bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] */}
       <div className="mx-auto box-border flex max-w-7xl flex-col gap-6 lg:flex-row lg:gap-10">
         {/* Contact Left */}
-        <div className="flex flex-1 flex-col justify-center rounded-2xl border border-[#f1f5f9] bg-white p-6 shadow-sm md:p-12">
+        <div className="flex flex-1 flex-col justify-center rounded-2xl border border-[#f1f5f9] bg-neutral-white p-6 shadow-sm md:p-12">
           {/* Video Container */}
           <div className="mb-6 flex justify-center overflow-hidden">
             <video
-              className="mb-6 block h-auto w-full max-w-[400px] border-none bg-white object-contain outline-none"
+              className="mb-6 block h-auto w-full max-w-[400px] border-none bg-neutral-white object-contain outline-none"
               autoPlay
               muted
               loop
@@ -58,7 +58,7 @@ export default function ContactSection() {
         </div>
 
         {/* Contact Right */}
-        <div className="flex flex-1 items-center justify-center rounded-2xl border border-[#f1f5f9] bg-white p-6 shadow-sm md:p-8">
+        <div className="flex flex-1 items-center justify-center rounded-2xl border border-[#f1f5f9] bg-neutral-white p-6 shadow-sm md:p-8">
           <ContactForm />
         </div>
       </div>

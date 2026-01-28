@@ -280,7 +280,7 @@ export default function CoreValuesSection() {
           {values.map((item, index) => (
             <motion.div
               key={index}
-              className="rounded-[10px] bg-white p-4 text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)] transition-all duration-300"
+              className="rounded-[10px] bg-neutral-white p-4 text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)] transition-all duration-300"
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}

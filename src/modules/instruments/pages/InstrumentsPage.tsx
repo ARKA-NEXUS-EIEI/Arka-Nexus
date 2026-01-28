@@ -14,7 +14,7 @@ const InstrumentsPage = () => {
 
   return (
     // Replaced .instruments-page with Tailwind
-    <div className="relative bg-[#020617] pb-8 text-white">
+    <div className="relative bg-[#020617] pb-8 text-neutral-white">
       {/* Scroll progress bar - Refactored to Tailwind */}
       <div
         className="fixed left-0 top-0 z-[60] h-1 bg-gradient-to-r from-[#f97316] to-[#eaaf2f] transition-[width] duration-150 ease-linear"

@@ -96,11 +96,13 @@ export default function AboutTabsSection() {
             className={`flex items-center rounded-lg border px-6 py-3 text-body-sm transition-all duration-300 ${
               activeTab === tab.id
                 ? "scale-105 border-brand-primary bg-brand-primary font-semibold text-[#031a42] shadow-[0_0_15px_rgba(252,211,77,0.3)]"
-                : "border-[#fca74d]/50 bg-white/70 text-slate-800 hover:bg-brand-primary/80 hover:text-white"
+                : "border-[#fca74d]/50 bg-neutral-white/70 text-slate-800 hover:bg-brand-primary/80 hover:text-neutral-white"
             }`}
           >
             {tab.id === "mission" && <Target className="mr-2" size={20} />}
-            {tab.id === "objectives" && <ChevronRight className="mr-2" size={20} />}
+            {tab.id === "objectives" && (
+              <ChevronRight className="mr-2" size={20} />
+            )}
             {tab.id === "usp" && <Award className="mr-2" size={20} />}
             {tab.id === "values" && <Heart className="mr-2" size={20} />}
             {tab.label}

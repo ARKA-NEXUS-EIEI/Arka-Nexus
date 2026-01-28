@@ -95,7 +95,7 @@ export default function AboutSection() {
               transition={{ delay: 0.7, duration: 0.8 }}
             >
               <motion.div
-                className="decorator-shine absolute left-0 top-0 h-full w-[30px] bg-gradient-to-r from-transparent via-white/90 to-transparent"
+                className="decorator-shine absolute left-0 top-0 h-full w-[30px] bg-gradient-to-r from-transparent via-neutral-white/90 to-transparent"
                 animate={{ x: [0, 120, 0], opacity: [0, 1, 0] }}
                 transition={{ repeat: Infinity, duration: 3, repeatDelay: 2 }}
               />
@@ -106,7 +106,7 @@ export default function AboutSection() {
         {/* Main content container with text and video */}
         <div className="mx-auto my-section-y mb-8 grid max-w-arka grid-cols-1 items-center gap-8 sm:px-0.5 lg:grid-cols-[2fr_1.5fr] lg:gap-1 lg:px-safe-x">
           {/* Left Text Content */}
-          <div className="space-y-4 text-justify font-semibold text-neutral-white text-h4 leading-relaxed">
+          <div className="space-y-4 text-justify text-h4 font-semibold leading-relaxed text-neutral-white">
             {content.about.paragraphs.map((para, idx) => (
               <motion.p
                 key={idx}
@@ -164,7 +164,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:gap-10">
             {/* Vision Card */}
             <div
-              className={`relative min-h-[180px] cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 scale-95 opacity-0"}`}
+              className={`relative min-h-[180px] cursor-pointer rounded-2xl border border-slate-200 bg-neutral-white p-6 shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 scale-95 opacity-0"}`}
             >
               <div className="mb-2 flex flex-row items-center gap-3 text-center md:flex-row md:text-left">
                 <div className="flex-shrink-0">
@@ -180,7 +180,7 @@ export default function AboutSection() {
 
             {/* Mission Card */}
             <div
-              className={`relative min-h-[180px] cursor-pointer rounded-2xl border border-slate-200 bg-white p-6 shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl ${isVisible ? "translate-x-0 opacity-100" : "translate-x-12 scale-95 opacity-0"}`}
+              className={`relative min-h-[180px] cursor-pointer rounded-2xl border border-slate-200 bg-neutral-white p-6 shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl ${isVisible ? "translate-x-0 opacity-100" : "translate-x-12 scale-95 opacity-0"}`}
             >
               <div className="mb-2 flex flex-row items-center gap-4 text-center md:flex-row md:text-left">
                 <MissionIcon isVisible={isVisible} />

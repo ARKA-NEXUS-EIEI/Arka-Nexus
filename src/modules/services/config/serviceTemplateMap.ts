@@ -4,36 +4,44 @@ export type TrainingHeroVariant = "shield" | "training";
 export const SERVICE_MAP = {
   "energy-audit": {
     template: "audit",
-    sanityType: "energyAudit",
+    sanityType: "auditService",
+    serviceKey: "energy-audit",
   },
   "power-quality": {
     template: "audit",
-    sanityType: "powerQuality",
+    sanityType: "auditService",
+    serviceKey: "power-quality",
   },
   "harmonic-study": {
     template: "audit",
-    sanityType: "harmonicAudit",
+    sanityType: "auditService",
+    serviceKey: "harmonic-study",
   },
   "solar-panel-study": {
     template: "audit",
-    sanityType: "solarPlantAudit",
+    sanityType: "auditService",
+    serviceKey: "solar-panel-study",
   },
   "thermal-study": {
     template: "audit",
-    sanityType: "thermalAudit",
+    sanityType: "auditService",
+    serviceKey: "thermal-study",
   },
   "vibration-audit": {
     template: "audit",
-    sanityType: "vibrationAudit",
+    sanityType: "auditService",
+    serviceKey: "vibration-audit",
   },
   "industrial-training": {
     template: "training",
-    sanityType: "industrialTrainingProgram",
+    sanityType: "trainingService",
+    serviceKey: "industrial-training",
     heroVariant: "training",
   },
   "industrial-safety-audit": {
     template: "training",
-    sanityType: "industrialSafetyAudit",
+    sanityType: "trainingService",
+    serviceKey: "industrial-safety-audit",
     heroVariant: "shield",
   },
 } as const;

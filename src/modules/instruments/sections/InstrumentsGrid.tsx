@@ -44,19 +44,19 @@ export default function InstrumentsGrid({
             return (
               <div
                 key={idx}
-                className={`group relative flex w-full max-w-[280px] items-center gap-3 overflow-hidden rounded-card border-l-[3px] border-orange-500/90 bg-gradient-to-b from-white/[0.04] to-white/[0.02] p-3 shadow-[0_8px_24px_rgba(4,8,24,0.5)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_15px_35px_rgba(0,0,0,0.5)] md:max-w-[310px] md:p-4 ${visible ? "fade-in" : ""}`}
+                className={`group relative flex w-full max-w-[280px] items-center gap-3 overflow-hidden rounded-card border-l-[3px] border-orange-500/90 bg-gradient-to-b from-neutral-white/[0.04] to-neutral-white/[0.02] p-3 shadow-[0_8px_24px_rgba(4,8,24,0.5)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_15px_35px_rgba(0,0,0,0.5)] md:max-w-[310px] md:p-4 ${visible ? "fade-in" : ""}`}
                 style={{ animationDelay: `${idx * 60}ms` }}
               >
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#eaaf2f1f] to-[#f973161f] text-orange-500 md:h-12 md:w-12">
                   <Icon size={20} />
                 </div>
                 <div className="text-left">
-                  <h3 className="m-0 text-body-sm leading-tight text-neutralwhite">
+                  <h3 className="text-neutralwhite m-0 text-body-sm leading-tight">
                     {item}
                   </h3>
                 </div>
                 {/* Subtle card highlight overlay */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.02] to-white/[0.01]" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-neutral-white/[0.02] to-neutral-white/[0.01]" />
               </div>
             );
           })}

@@ -3,7 +3,9 @@ type Props = {
 };
 
 const SkeletonBox = ({ className = "" }: Props) => (
-  <div className={`animate-pulse rounded-lg bg-white/10 ${className} `} />
+  <div
+    className={`animate-pulse rounded-lg bg-neutral-white/10 ${className} `}
+  />
 );
 
 export default SkeletonBox;

@@ -28,7 +28,7 @@ const ContactForm = ({ onSuccess }: Props) => {
     "font-semibold text-gray-700 text-body-sm tracking-tight";
 
   const inputStyle =
-    "px-4 py-2 border-2 border-gray-200 rounded-xl text-body-sm transition-all duration-200 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 hover:border-gray-300 bg-white text-gray-800 leading-relaxed";
+    "px-4 py-2 border-2 border-gray-200 rounded-xl text-body-sm transition-all duration-200 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 hover:border-gray-300 bg-neutral-white text-gray-800 leading-relaxed";
 
   return (
     <div className="relative w-full">
@@ -43,7 +43,7 @@ const ContactForm = ({ onSuccess }: Props) => {
       >
         {/* ---------------- Header ---------------- */}
         <div className="relative mb-2 overflow-hidden rounded-xl p-6 text-center text-brand-primary">
-          <div className="pointer-events-none absolute inset-0 -translate-x-full animate-[shimmer_3s_infinite] bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 -translate-x-full animate-[shimmer_3s_infinite] bg-gradient-to-r from-transparent via-neutral-white/5 to-transparent" />
           <h1 className="relative z-10 text-h3 font-bold tracking-tight">
             Get In Touch With Our Engineering Experts
           </h1>

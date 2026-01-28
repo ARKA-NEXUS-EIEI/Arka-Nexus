@@ -34,7 +34,7 @@ export default function InstrumentsHero({
               <img
                 src={urlFor(image[0]).width(1200).url()}
                 alt="instruments-hero"
-                className="h-[150px] w-[200px] rounded-[14px] border border-white/5 object-cover shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:h-[140px] lg:w-[220px]"
+                className="h-[150px] w-[200px] rounded-[14px] border border-neutral-white/5 object-cover shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:h-[140px] lg:w-[220px]"
               />
             </div>
           ) : (

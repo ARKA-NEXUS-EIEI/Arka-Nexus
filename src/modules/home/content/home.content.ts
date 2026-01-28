@@ -68,6 +68,7 @@ export const homeContent: HomeContent = {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbp0Dxw3RTE6T4RMGdX3hX8ZmhDzCpTTJMJA&s",
       "https://media.istockphoto.com/id/1337173750/photo/solar-and-wind-power.jpg?s=612x612&w=0&k=20&c=krNUQVFMq4DDPDvhKhW4SwL06NlmZ7dcHWWGDsxZzKI=",
       "https://plus.unsplash.com/premium_photo-1678889596384-6e317ec8bf97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://media.istockphoto.com/id/2163506577/photo/work-safety-and-compliance-concept-businessman-holding-magnifying-glass-with-icons-work.jpg?s=612x612&w=is&k=20&c=yx-I-nHJJ4A6vswwKTFaDdD85JSGciBPusifzfTyut4="
     ],
   },
 

@@ -122,7 +122,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
             src={arka_logo}
             alt="Arka Nexus Logo"
             whileHover={{ scale: 1.02 }}
-            className={`transition-all duration-300 ${ isScrolled ? "h-[45px] sm:h-[50px] md:h-[55px]" : "h-[55px] sm:h-[60px] md:h-[65px]" }`}
+            className={`transition-all duration-300 ${isScrolled ? "h-[45px] sm:h-[50px] md:h-[55px]" : "h-[55px] sm:h-[60px] md:h-[65px]"}`}
           />
         </Link>
 
@@ -168,7 +168,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
                 </svg>
               </Link>
               {isAboutDropdownOpen && (
-                <div className="absolute left-0 top-full min-w-[200px] rounded-dropdown bg-white p-2 shadow-dropdown transition-all hover:visible hover:opacity-100">
+                <div className="absolute left-0 top-full min-w-[200px] rounded-dropdown bg-neutral-white p-2 shadow-dropdown transition-all hover:visible hover:opacity-100">
                   {aboutItems.map((item, index) => (
                     <HashLink
                       key={index}
@@ -210,7 +210,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
               </Link>
 
               {isMegaMenuOpen && (
-                <div className="absolute left-1/2 top-full z-[1002] w-mega-menu-w max-w-mega -translate-x-1/2 rounded-mega border border-neutral-border bg-white p-8 shadow-mega">
+                <div className="absolute left-1/2 top-full z-[1002] w-mega-menu-w max-w-mega -translate-x-1/2 rounded-mega border border-neutral-border bg-neutral-white p-8 shadow-mega">
                   <div className="grid grid-cols-4 gap-card-gap">
                     {services.map((service, index) => (
                       <div

@@ -70,7 +70,7 @@ export default function ClientsSection() {
               {clientLogos.topRowLogos.map((logo, index) => (
                 <div
                   key={index}
-                  className="group mx-4 flex items-center justify-center rounded-card border border-white/30 bg-white/95 p-4 shadow-card backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:mx-6"
+                  className="group mx-4 flex items-center justify-center rounded-card border border-neutral-white/30 bg-neutral-white/95 p-4 shadow-card backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:mx-6"
                 >
                   <img
                     src={urlFor(logo).url()}
@@ -91,7 +91,7 @@ export default function ClientsSection() {
               {clientLogos.bottomRowLogos.map((logo, index) => (
                 <div
                   key={index}
-                  className="group mx-4 flex items-center justify-center rounded-card border border-white/30 bg-white/95 p-3 shadow-card backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:mx-6 md:p-4"
+                  className="group mx-4 flex items-center justify-center rounded-card border border-neutral-white/30 bg-neutral-white/95 p-3 shadow-card backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:mx-6 md:p-4"
                 >
                   <img
                     src={urlFor(logo).url()}

@@ -3,7 +3,7 @@ import { useSnapshots, type SnapshotsData } from "../hooks/useSnapshots";
 
 const SnapshotsPage = () => {
   const data: SnapshotsData | null = useSnapshots();
-  if (!data) return <p className="p-8 text-white">Loading...</p>;
+  if (!data) return <p className="p-8 text-neutral-white">Loading...</p>;
 
   return (
     <div className="relative mt-24 px-2 pb-8 lg:px-6">

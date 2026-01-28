@@ -24,12 +24,12 @@ export default function AboutTeamSection() {
   return (
     <>
       <section id="team" className="mt-1 scroll-mt-nav-h">
-        <div className="mx-auto max-w-[1400px] rounded-2xl border border-[#e88011]/20 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 md:p-10">
+        <div className="mx-auto max-w-[1400px] rounded-2xl border border-[#e88011]/20 bg-gradient-to-br from-neutral-white/5 to-neutral-white/[0.02] p-6 md:p-10">
           {/* Section Header */}
           <div className="mx-auto mb-12 text-center">
-            <h2 className="mb-4 bg-gradient-to-br from-white to-[#e88011] bg-clip-text text-h3 font-bold text-transparent">
+            <div className="mb-4 bg-gradient-to-br from-neutral-white to-[#e88011] bg-clip-text text-h2 font-bold text-transparent">
               {team.sectionTitle}
-            </h2>
+            </div>
             <p className="mx-auto max-w-3xl text-h4 leading-relaxed text-slate-100">
               {introText}
             </p>
@@ -37,7 +37,7 @@ export default function AboutTeamSection() {
               {expertiseItems.map((item, idx) => (
                 <div
                   key={idx}
-                  className="group flex items-center gap-2 whitespace-nowrap rounded-full border border-[#e88011]/30 bg-white/5 px-5 py-2.5 text-body-sm text-slate-100 transition-all duration-300 hover:border-[#e88011]/60 hover:bg-[#e88011]/10"
+                  className="group flex items-center gap-2 whitespace-nowrap rounded-full border border-[#e88011]/30 bg-neutral-white/5 px-5 py-2.5 text-body-sm text-slate-100 transition-all duration-300 hover:border-[#e88011]/60 hover:bg-[#e88011]/10"
                 >
                   {/* Glowing Dot Decoration */}
                   <span className="h-2 w-2 rounded-full bg-[#e88011] shadow-[0_0_8px_#e88011] transition-transform group-hover:scale-125" />
@@ -54,12 +54,12 @@ export default function AboutTeamSection() {
               return (
                 <div
                   key={index}
-                  className="team-card-legacy duration-400 group relative min-w-[320px] max-w-[420px] flex-1 overflow-hidden rounded-2xl border-2 border-[#e88011]/20 bg-gradient-to-br from-white to-slate-50 p-8 text-center shadow-lg transition-all before:absolute before:left-0 before:right-0 before:top-0 before:h-1 before:bg-gradient-to-r before:from-[#e88011] before:to-blue-500 before:content-[''] hover:-translate-y-2 hover:border-[#e88011]/40 hover:shadow-2xl"
+                  className="team-card-legacy duration-400 group relative min-w-[320px] max-w-[420px] flex-1 overflow-hidden rounded-2xl border-2 border-[#e88011]/20 bg-gradient-to-br from-neutral-white to-slate-50 p-8 text-center shadow-lg transition-all before:absolute before:left-0 before:right-0 before:top-0 before:h-1 before:bg-gradient-to-r before:from-[#e88011] before:to-blue-500 before:content-[''] hover:-translate-y-2 hover:border-[#e88011]/40 hover:shadow-2xl"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Photo Container */}
                   {member.photoUrl && (
-                    <div className="relative mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow-[0_8px_24px_rgba(232,128,17,0.3)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_12px_32px_rgba(232,128,17,0.4)]">
+                    <div className="relative mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-neutral-white shadow-[0_8px_24px_rgba(232,128,17,0.3)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_12px_32px_rgba(232,128,17,0.4)]">
                       <img
                         src={member.photoUrl}
                         alt={member.name}
@@ -100,7 +100,7 @@ export default function AboutTeamSection() {
           </div>
 
           {/* Stats Section */}
-          <div className="mx-auto flex w-fit flex-wrap justify-center gap-x-4 gap-y-8 rounded-xl border border-[#e88011]/30 bg-white/10 p-3 backdrop-blur-sm md:gap-12 md:px-8">
+          <div className="mx-auto flex w-fit flex-wrap justify-center gap-x-4 gap-y-8 rounded-xl border border-[#e88011]/30 bg-neutral-white/10 p-3 backdrop-blur-sm md:gap-12 md:px-8">
             {team.stats?.map((stat, i) => (
               <div
                 key={i}

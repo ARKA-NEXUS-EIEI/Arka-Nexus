@@ -24,7 +24,7 @@ const ContactModal = ({ onClose }: Props) => {
     >
       <motion.div
         /* Modal Content: Implements max-width, max-height, and shadow logic */
-        className="relative flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-400/10"
+        className="relative flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-neutral-white shadow-2xl ring-1 ring-slate-400/10"
         variants={modalVariants}
         initial="hidden"
         animate="visible"

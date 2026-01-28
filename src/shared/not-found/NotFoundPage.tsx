@@ -38,7 +38,7 @@ const NotFoundPage = () => {
             404
           </h1>
 
-          <h2 className="px-2 text-h3 font-bold uppercase tracking-widest text-white">
+          <h2 className="px-2 text-h3 font-bold uppercase tracking-widest text-neutral-white">
             Oops! Path Not Found
           </h2>
 
@@ -66,11 +66,11 @@ const NotFoundPage = () => {
 
         {/* Minimalist Footer Decor - Hidden on very small screens to save space */}
         <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-2 opacity-80 sm:flex md:bottom-10">
-          <div className="h-[1px] w-8 bg-white md:w-12" />
-          <span className="whitespace-nowrap text-body-sm uppercase tracking-[0.3em] text-white md:tracking-[0.5em]">
+          <div className="h-[1px] w-8 bg-neutral-white md:w-12" />
+          <span className="whitespace-nowrap text-body-sm uppercase tracking-[0.3em] text-neutral-white md:tracking-[0.5em]">
             Arka Nexus Intelligence
           </span>
-          <div className="h-[1px] w-8 bg-white md:w-12" />
+          <div className="h-[1px] w-8 bg-neutral-white md:w-12" />
         </div>
       </div>
     </div>

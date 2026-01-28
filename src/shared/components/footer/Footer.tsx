@@ -27,19 +27,23 @@ export default function Footer() {
       <div className="mx-auto mb-8 grid max-w-arka grid-cols-1 gap-8 px-5 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1.5fr_2fr]">
         {/* Brand Section */}
         <div className="flex flex-col md:items-start lg:items-center">
+
+          {/* Logo */}
           <Link to="/" className="mb-4">
             <motion.img
-              className="h-[60px] rounded-md bg-white p-1"
+              className="h-[60px] rounded-md bg-neutral-white p-1"
               src={arka_logo}
               alt="Arka Nexus Logo"
               whileHover={{ scale: 1.02 }}
             />
           </Link>
 
+          {/* Tagline */}
           <p className="mb-5 text-body font-semibold leading-relaxed text-neutral-textMuted md:text-left lg:text-center">
             Engineering Intelligence Empowering Industry
           </p>
 
+          {/* Social Media Links */}
           <div className="flex gap-3">
             <motion.a
               href="https://www.linkedin.com/company/arka-nexus/"
@@ -56,6 +60,11 @@ export default function Footer() {
               <FontAwesomeIcon icon={faInstagram} />
             </motion.a>
           </div>
+
+          {/* UDYAM Number */} 
+          <div className="text-body-sm text-neutral-textMuted md:text-left lg:text-center mt-4"> 
+            UDYAM No: UDYAM-TN-12-0166609 
+          </div>
         </div>
 
         {/* Quick Links */}
@@ -67,7 +76,7 @@ export default function Footer() {
             {["Home", "About", "Services"].map((link) => (
               <li key={link} className="md:text-left lg:text-center">
                 <Link
-                  to={`/${link.toLowerCase()}`}
+                  to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
                   className="text-body-sm text-neutral-textMuted transition-colors hover:text-brand-primary"
                 >
                   {link}

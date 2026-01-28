@@ -50,7 +50,7 @@ const AuditServiceTemplate = ({ data }: Props) => {
                   initial="hidden"
                   animate="visible"
                   custom={0.4}
-                  className="text-justify text-body leading-relaxed text-white"
+                  className="text-justify text-body leading-relaxed text-neutral-white"
                 >
                   {data.description}
                 </motion.p>
@@ -152,7 +152,7 @@ const AuditServiceTemplate = ({ data }: Props) => {
                   Key Steps Involved
                 </h3>
               </div>
-              <div className="rounded-2xl border border-[#e4932a] bg-white p-6 shadow-md">
+              <div className="rounded-2xl border border-[#e4932a] bg-neutral-white p-6 shadow-md">
                 <ListBlock items={data.keySteps || []} />
               </div>
             </motion.div>
@@ -183,7 +183,7 @@ const AuditServiceTemplate = ({ data }: Props) => {
                   Benefits of {data.title}
                 </h3>
               </div>
-              <div className="rounded-2xl border border-[#be6f14] bg-gradient-to-br from-white to-[#faf0d1] p-6 shadow-md">
+              <div className="rounded-2xl border border-[#be6f14] bg-gradient-to-br from-neutral-white to-[#faf0d1] p-6 shadow-md">
                 <ListBlock items={data.benefits || []} />
               </div>
             </motion.div>
@@ -195,7 +195,7 @@ const AuditServiceTemplate = ({ data }: Props) => {
               <div key={index} className="flex items-center">
                 <div className="h-3 w-3 rounded-full bg-brand-primary shadow-sm" />
                 {index < (data.keySteps?.length || 0) - 1 && (
-                  <div className="mx-2 h-[2px] w-8 bg-white opacity-50 lg:w-10" />
+                  <div className="mx-2 h-[2px] w-8 bg-neutral-white opacity-50 lg:w-10" />
                 )}
               </div>
             ))}

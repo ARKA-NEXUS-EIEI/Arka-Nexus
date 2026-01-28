@@ -4,7 +4,7 @@ import SkeletonCircle from "../../../shared/ui/skeleton/SkeletonCircle";
 
 const TrainingServiceSkeleton = () => {
   return (
-    <div className="min-h-screen bg-[#020617] px-6 pt-24 text-white selection:bg-brand-primary/30">
+    <div className="min-h-screen bg-[#020617] px-6 pt-24 text-neutral-white selection:bg-brand-primary/30">
       {/* ================= HERO ================= */}
       <section className="relative flex min-h-[650px] items-center pb-16">
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-12">
@@ -12,7 +12,7 @@ const TrainingServiceSkeleton = () => {
           <div className="space-y-8 lg:col-span-7">
             <SkeletonBox className="h-6 w-40 rounded-md" />
             <SkeletonBox className="h-14 w-3/4 rounded-lg" />
-            <div className="space-y-4 border-l-2 border-white/10 pl-8">
+            <div className="space-y-4 border-l-2 border-neutral-white/10 pl-8">
               <SkeletonText lines={3} />
               <SkeletonText lines={2} className="max-w-3xl" />
             </div>
@@ -35,7 +35,7 @@ const TrainingServiceSkeleton = () => {
               {[1, 2, 3, 4].map((item) => (
                 <SkeletonBox
                   key={item}
-                  className="h-14 rounded-r-xl border-l-4 border-white/20"
+                  className="h-14 rounded-r-xl border-l-4 border-neutral-white/20"
                 />
               ))}
             </div>
