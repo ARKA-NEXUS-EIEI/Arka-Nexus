@@ -38,24 +38,27 @@ export const tokens = {
     h1: [
       "clamp(1.5rem, 1rem + 2vw, 2.25rem)",
       { lineHeight: "1.2", fontWeight: "700" },
-    ],
+    ] as [string, { lineHeight: string; fontWeight: string }],
     h2: [
       "clamp(1.5rem, 1rem + 2vw, 2rem)",
       { lineHeight: "1.3", fontWeight: "700" },
-    ], // scales 24px → 32px
+    ] as [string, { lineHeight: string; fontWeight: string }],
     h3: [
       "clamp(1.125rem, 0.875rem + 1.5vw, 1.5rem)",
       { lineHeight: "1.4", fontWeight: "600" },
-    ], // scales 18px → 24px
+    ] as [string, { lineHeight: string; fontWeight: string }],
     h4: [
       "clamp(1rem, 0.75rem + 1vw, 1.25rem)",
       { lineHeight: "1.5", fontWeight: "600" },
-    ], // scales 16px → 20px
-    body: ["clamp(1rem, 0.875rem + 0.5vw, 1.2rem)", { lineHeight: "1.6" }], // scales 16px → 19px
+    ] as [string, { lineHeight: string; fontWeight: string }],
+    body: [
+      "clamp(1rem, 0.875rem + 0.5vw, 1.2rem)",
+      { lineHeight: "1.6" },
+    ] as [string, { lineHeight: string }],
     "body-sm": [
       "clamp(0.875rem, 0.75rem + 0.5vw, 1rem)",
       { lineHeight: "1.5" },
-    ], // scales 14px → 16px
+    ] as [string, { lineHeight: string }],
     "nav-link": "1.1rem",
     "dropdown-link": "0.875rem",
     "mobile-link": "1.1rem",
@@ -73,4 +76,10 @@ export const tokens = {
     button: "0 4px 15px rgba(249, 115, 22, 0.3)",
     card: "0 10px 30px -5px rgba(0, 0, 0, 0.1)",
   },
+  delay: {
+    300: "300ms", 500: "500ms", 800: "800ms", 1000: "1000ms", 1100: "1100ms", 1200: "1200ms", 1300: "1300ms", 1500: "1500ms", 1700: "1700ms", 1800: "1800ms",
+  },
+  duration: {
+    150: "150ms", 200: "200ms", 300: "300ms", 400: "400ms", 500: "500ms", 600: "600ms", 800: "800ms", 1000: "1000ms", 1200: "1200ms", 3000: "3000ms",
+  }
 };

@@ -73,7 +73,14 @@ const aboutItems = [
   { title: "Our Team", link: "/about#team" },
   { title: "USPs", link: "/about#usp" },
   { title: "Core Values", link: "/about#values" },
+  { title: "Snap Shots", link: "/snapshots" },
 ];
+
+const rdItems = [
+  { title: "Research & Development", link: "/research" },
+  { title: "SDG", link: "/sdg" },
+  { title: "Case Studies & White Papers", link: "/publications" },
+]
 
 function Navbar({ onContactClick }: { onContactClick: () => void }) {
   const location = useLocation();
@@ -81,6 +88,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isRdDropdownOpen, setIsRdDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -99,6 +107,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
     setIsMobileMenuOpen(false);
     setIsAboutDropdownOpen(false);
     setIsServicesDropdownOpen(false);
+    setIsRdDropdownOpen(false);
     setIsMegaMenuOpen(false);
   }, [location.pathname]);
 
@@ -269,13 +278,43 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
               </Link>
             </li> */}
 
-            <li className="group relative">
-              <Link
-                to="/snapshots"
-                className="flex items-center gap-2 px-4 py-3 text-nav-link font-medium text-neutral-textMain transition-all group-hover:text-brand-primary"
+            <li
+              className="relative"
+              onMouseEnter={() => setIsRdDropdownOpen(true)}
+              onMouseLeave={() => setIsRdDropdownOpen(false)}
+            >
+              <div
+                className="flex items-center gap-2 px-4 py-3 text-nav-link font-medium text-neutral-textMain transition-all hover:text-brand-primary"
               >
-                Snap Shots
-              </Link>
+                R & D
+                <svg
+                  className="transition-transform duration-300 hover:rotate-180"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                >
+                  <path
+                    d="M2 4l4 4 4-4"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              {isRdDropdownOpen && (
+                <div className="absolute left-0 top-full min-w-[200px] rounded-dropdown bg-neutral-white p-2 shadow-dropdown transition-all hover:visible hover:opacity-100">
+                  {rdItems.map((item, index) => (
+                    <HashLink
+                      key={index}
+                      to={item.link}
+                      onClick={() => setIsRdDropdownOpen(false)}
+                      className="block rounded-md p-3 text-dropdown-link font-medium text-neutral-textMain transition-all hover:text-brand-primary"
+                    >
+                      {item.title}
+                    </HashLink>
+                  ))}
+                </div>
+              )}
             </li>
           </ul>
 
@@ -451,14 +490,59 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
                   Instruments Used
                 </HashLink>
               </li>
+
+              {/* 5. R & D - TEXT navigates, ICON toggles */}
               <li className="border-b border-neutral-border">
-                <Link
-                  to="/snapshots"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-5 text-center text-mobile-link font-medium text-neutral-textMain hover:text-brand-primary"
+                <div className="relative flex w-full items-center justify-between py-5">
+                  <Link
+                    to="/research"
+                    className="flex-1 pl-8 text-center text-mobile-link font-medium text-neutral-textMain transition-colors hover:text-brand-primary"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    R & D
+                  </Link>
+                  <button
+                    className="rounded-full p-1 transition-colors hover:bg-neutral-light"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsRdDropdownOpen(!isRdDropdownOpen);
+                    }}
+                  >
+                    <svg
+                      className={`transition-transform duration-300 ${isRdDropdownOpen ? "rotate-180" : ""} color: currentColor`}
+                      width="16"
+                      height="16"
+                      viewBox="0 0 12 12"
+                    >
+                      <path
+                        d="M2 4l4 4 4-4"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                {/* R & D Dropdown Content */}
+                <div
+                  className={`overflow-hidden rounded-lg bg-neutral-light/20 transition-all duration-300 ${
+                    isRdDropdownOpen
+                      ? "my-2 max-h-96 opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
                 >
-                  Snap Shots
-                </Link>
+                  {rdItems.map((item, index) => (
+                    <HashLink
+                      key={index}
+                      to={item.link}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block px-6 py-3 text-center text-neutral-textMain hover:text-brand-primary"
+                    >
+                      {item.title}
+                    </HashLink>
+                  ))}
+                </div>
               </li>
 
               {/* 5. Contact Us Button */}

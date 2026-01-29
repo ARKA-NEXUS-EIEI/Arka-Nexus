@@ -73,7 +73,7 @@ export default function Footer() {
             Links
           </h3>
           <ul className="list-none space-y-2 p-0">
-            {["Home", "About", "Services"].map((link) => (
+            {["Home", "About", "Services", "Research"].map((link) => (
               <li key={link} className="md:text-left lg:text-center">
                 <Link
                   to={link === "Home" ? "/" : `/${link.toLowerCase()}`}

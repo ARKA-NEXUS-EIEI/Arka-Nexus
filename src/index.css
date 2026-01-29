@@ -1,3 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background & Foreground */
+    --background: 220 25% 10%;
+    --foreground: 0 0% 98%;
+    
+    /* Card */
+    --card: 220 25% 14%;
+    --card-foreground: 0 0% 98%;
+    
+    /* Popover */
+    --popover: 220 25% 14%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Primary (Brand Orange) */
+    --primary: 28 90% 46%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary */
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 0 0% 98%;
+    
+    /* Muted */
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 10% 60%;
+    
+    /* Accent */
+    --accent: 28 90% 46%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Border & Input */
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 28 90% 46%;
+    
+    /* Radius */
+    --radius: 0.5rem;
+    
+    /* Brand Navy palette */
+    --brand-navy: 220 25% 10%;
+    --brand-navy-light: 220 25% 14%;
+    --brand-navy-lighter: 220 25% 18%;
+    
+    /* Sidebar */
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 28 90% 46%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 20% 25%;
+    --sidebar-ring: 28 90% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+@layer utilities {
+  /* Text gradient using brand primary */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-secondary;
+  }
+  
+  /* Glow effect using brand primary */
+  .glow-primary {
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.2);
+  }
+  
+  /* Legacy alias */
+  .glow-orange {
+    @apply glow-primary;
+  }
+  
+  /* Card shadow */
+  .card-shadow {
+    @apply shadow-card;
+  }
+  
+  /* Grid pattern utility */
+  .grid-pattern {
+    background-image: linear-gradient(rgba(249, 115, 22, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(249, 115, 22, 0.1) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  
+  /* Dot pattern utility */
+  .dot-pattern {
+    background-image: radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+}

@@ -22,7 +22,7 @@ export default function AboutIntroSection() {
   const downloadBrochure = () => {
     const link = document.createElement("a");
     link.href = Brochure;
-    link.download = content ? content.about.brochureFileName : "Brochure.pdf";
+    link.download = content ? content.intro.brochureFileName : "Brochure.pdf";
     link.click();
   };
 

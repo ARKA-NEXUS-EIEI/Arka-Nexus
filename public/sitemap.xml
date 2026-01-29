@@ -38,4 +38,25 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <!-- Research & Development -->
+  <url>
+    <loc>https://arkaxus.com/research</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- SDG -->
+  <url>
+    <loc>https://arkaxus.com/sdg</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Case Studies & White Papers / Publications -->
+  <url>
+    <loc>https://arkaxus.com/publications</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
 </urlset>
