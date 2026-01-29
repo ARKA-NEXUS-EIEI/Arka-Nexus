@@ -6,7 +6,7 @@ import {
   getTrainingServiceData,
 } from "../../../core/services/sanity/services.service";
 
-export const useServiceData = (slug: string) => {
+export const useServiceData = (slug?: string) => {
   const [data, setData] = useState<any>(null);
   const [template, setTemplate] = useState<"audit" | "training" | null>(null);
   const [loading, setLoading] = useState<boolean>(true);

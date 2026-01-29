@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import ContactAlerts from "./ContactAlerts";
-import { SERVICE_OPTIONS } from "../utils/contact.constants";
+import { useServiceOptions } from "../../../../modules/services/config/useServiceOptions";
 import { useContactForm } from "../hooks/useContactForm";
 
 type Props = {
@@ -17,6 +17,10 @@ const ContactForm = ({ onSuccess }: Props) => {
     handleChange,
     handleSubmit,
   } = useContactForm(onSuccess);
+
+  const { options, loading } = useServiceOptions();
+
+  if (loading) return null;
 
   const showOtherServices = formData.services === "Others";
 
@@ -181,7 +185,7 @@ const ContactForm = ({ onSuccess }: Props) => {
             onChange={handleChange}
           >
             <option value="">Select a service</option>
-            {SERVICE_OPTIONS.map((service) => (
+            {options.map((service) => (
               <option key={service} value={service}>
                 {service}
               </option>

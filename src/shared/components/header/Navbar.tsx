@@ -2,70 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
-
+import { useServiceRegistry } from "../../../core/hooks/useServiceRegistry";
+import { SERVICE_NAV_IMAGES } from "../../../modules/services/config/serviceAssets";
 import arka_logo from "@/assets/images/logos/arka_Nexus.png";
-import training from "@/assets/images/nav_img/training.png";
-import energy from "@/assets/images/nav_img/energy_audit.png";
-import harmonic from "@/assets/images/nav_img/harmonic_audit.jpg";
-import solar from "@/assets/images/nav_img/solar.jpg";
-import vibration from "@/assets/images/nav_img/vibration.jpg";
-
-const serviceImages: Record<string, string> = {
-  "energy-audit": energy,
-  "power-quality":
-    "https://5.imimg.com/data5/FL/OW/EJ/SELLER-18659820/power-quality-analysis-services-500x500.jpg",
-  "harmonic-study": harmonic,
-  "solar-panel-study": solar,
-  "thermal-study":
-    "https://th.bing.com/th/id/OIP.Ydng70W3djzKrcksUbF13AHaEr?rs=1&pid=ImgDetMain",
-  "vibration-audit": vibration,
-  "safety-audit":
-    "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=250&fit=crop",
-  training: training,
-};
-
-const services = [
-  {
-    title: "Energy Audit",
-    link: "/services/energy-audit",
-    image: serviceImages["energy-audit"],
-  },
-  {
-    title: "Power Quality Audit",
-    link: "/services/power-quality",
-    image: serviceImages["power-quality"],
-  },
-  {
-    title: "Harmonic Audit",
-    link: "/services/harmonic-study",
-    image: serviceImages["harmonic-study"],
-  },
-  {
-    title: "Solar Plant Audit",
-    link: "/services/solar-panel-study",
-    image: serviceImages["solar-panel-study"],
-  },
-  {
-    title: "Thermal Study",
-    link: "/services/thermal-study",
-    image: serviceImages["thermal-study"],
-  },
-  {
-    title: "Vibration Audit",
-    link: "/services/vibration-audit",
-    image: serviceImages["vibration-audit"],
-  },
-  {
-    title: "Industrial Safety Audit",
-    link: "/services/industrial-safety-audit",
-    image: serviceImages["safety-audit"],
-  },
-  {
-    title: "Industrial Training Program",
-    link: "/services/industrial-training",
-    image: serviceImages["training"],
-  },
-];
 
 const aboutItems = [
   { title: "Vision & Mission", link: "/about#vision-mission" },
@@ -80,9 +19,17 @@ const rdItems = [
   { title: "Research & Development", link: "/research" },
   { title: "SDG", link: "/sdg" },
   { title: "Case Studies & White Papers", link: "/publications" },
-]
+];
 
 function Navbar({ onContactClick }: { onContactClick: () => void }) {
+  const { services: registryServices, loading } = useServiceRegistry();
+
+  const services = registryServices.map((service) => ({
+    title: service.title,
+    link: `/services/${service.slug}`,
+    image: SERVICE_NAV_IMAGES[service.slug],
+  }));
+
   const location = useLocation();
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -115,6 +62,8 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
     setIsMobileMenuOpen(false);
     onContactClick();
   };
+
+  if (loading) return null;
 
   return (
     <nav
@@ -283,9 +232,7 @@ function Navbar({ onContactClick }: { onContactClick: () => void }) {
               onMouseEnter={() => setIsRdDropdownOpen(true)}
               onMouseLeave={() => setIsRdDropdownOpen(false)}
             >
-              <div
-                className="flex items-center gap-2 px-4 py-3 text-nav-link font-medium text-neutral-textMain transition-all hover:text-brand-primary"
-              >
+              <div className="flex items-center gap-2 px-4 py-3 text-nav-link font-medium text-neutral-textMain transition-all hover:text-brand-primary">
                 R & D
                 <svg
                   className="transition-transform duration-300 hover:rotate-180"

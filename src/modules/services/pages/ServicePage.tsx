@@ -1,26 +1,36 @@
 import { useParams } from "react-router-dom";
+import NotFoundPage from "../../../shared/not-found/NotFoundPage";
+
+import { useServiceRegistry } from "../../../core/hooks/useServiceRegistry";
 import { useServiceData } from "../hooks/useServiceData";
+
 import AuditServiceTemplate from "../templates/AuditServiceTemplate";
 import TrainingServiceTemplate from "../templates/TrainingServiceTemplate";
-import NotFoundPage from "../../../shared/not-found/NotFoundPage";
-import TrainingServiceSkeleton from "../skeleton/TrainingServiceSkeleton";
-import AuditServiceSkeleton from "../skeleton/AuditServiceSkeleton";
 
-const ServicePage = () => {
+export default function ServicePage() {
   const { slug } = useParams<{ slug: string }>();
-  const { data, template, loading } = useServiceData(slug!);
 
-  // Render skeletons while loading based on template type
-  if (loading && template === "training") return <TrainingServiceSkeleton />;
-  if (loading && template === "audit") return <AuditServiceSkeleton />;
+  const { services, loading: registryLoading } = useServiceRegistry();
+  const { data, template, loading } = useServiceData(slug);
 
-  // Render NotFoundPage if no data or template
-  if (!data || !template) return <NotFoundPage />;
+  if (registryLoading || loading) {
+    return null; 
+  }
 
-  // Render the appropriate template based on the type
-  if (template === "audit") return <AuditServiceTemplate data={data} />;
+  const registryItem = services.find(
+    (service) => service.slug === slug && service.enabled !== false
+  );
 
-  return <TrainingServiceTemplate data={data} />;
-};
+  if (!registryItem || !data) {
+    return <NotFoundPage />;
+  }
 
-export default ServicePage;
+  switch (template) {
+    case "audit":
+      return <AuditServiceTemplate data={data} />;
+    case "training":
+      return <TrainingServiceTemplate data={data} />;
+    default:
+      return <NotFoundPage />;
+  }
+}

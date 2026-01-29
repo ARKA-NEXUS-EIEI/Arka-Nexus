@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import ImageMapper from "react-img-mapper";
 import { useState, useEffect } from "react";
+import ImageMapper from "react-img-mapper";
 
 import ServiceSection from "../sections/ServiceSection";
 import arrow from "@/assets/images/services/arrow.png";
@@ -10,6 +10,9 @@ import { SERVICES_MAP as MAP } from "../config/services.map";
 
 import { getServicesLandingContent } from "../providers/servicesLanding.provider";
 import type { ServicesLandingContent } from "../content/servicesLanding.content";
+import { useServiceRegistry } from "../../../core/hooks/useServiceRegistry";
+import { SERVICE_LANDING_IMAGES } from "../config/serviceLandingImages";
+
 import NotFoundPage from "../../../shared/not-found/NotFoundPage";
 
 const fadeSlide = {
@@ -22,6 +25,8 @@ const fadeSlide = {
 };
 
 function ServiceDetails() {
+  const { services, loading } = useServiceRegistry();
+
   const navigate = useNavigate();
   const [content, setContent] = useState<ServicesLandingContent | null>(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -68,6 +73,8 @@ function ServiceDetails() {
     </motion.div>
   );
 
+  if (loading) return null;
+
   return (
     <div className="w-full scroll-mt-nav-h overflow-x-hidden">
       {/* First Container: Flex Wrapper */}
@@ -113,7 +120,15 @@ function ServiceDetails() {
         </div>
       </div>
 
-      <ServiceSection services={content.services} />
+      <ServiceSection
+        services={(services ?? []).map(service => ({
+          id: service.order ?? 0,
+          title: service.title,
+          link: `/services/${service.slug}`,
+          image: SERVICE_LANDING_IMAGES[service.slug],
+        }))}
+      />
+
     </div>
   );
 }

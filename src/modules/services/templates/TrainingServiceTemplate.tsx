@@ -5,7 +5,6 @@ type Props = {
   data: {
     title: string;
     description: string;
-    intro?: string;
     images?: string[];
     heroVariant?: "shield" | "training";
     keyAreas?: string[];
@@ -28,12 +27,10 @@ const fadeUp = {
 const HeroSection = ({
   title,
   description,
-  intro,
   variant,
 }: {
   title: string;
   description?: string;
-  intro?: string;
   variant?: string;
 }) => (
   <section className="relative flex min-h-[650px] items-center overflow-hidden pb-16 pt-24">
@@ -82,10 +79,6 @@ const HeroSection = ({
 
             <p className="max-w-2xl text-justify text-body leading-relaxed text-neutral-white opacity-90">
               {description}
-            </p>
-
-            <p className="max-w-3xl text-justify text-body leading-relaxed text-neutral-white opacity-90">
-              {intro}
             </p>
           </motion.div>
         </div>
@@ -190,7 +183,6 @@ const TrainingServiceTemplate = ({ data }: Props) => {
       <HeroSection
         title={data.title}
         description={data.description}
-        intro={data.intro}
         variant={data.heroVariant}
       />
 
