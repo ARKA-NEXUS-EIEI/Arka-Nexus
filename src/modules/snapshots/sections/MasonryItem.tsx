@@ -11,7 +11,6 @@ export function MasonryItem({ image }: { image: string }) {
       <img
         src={image}
         alt="Snap Shot"
-        loading="lazy" // ✅ network lazy loading
         onLoad={() => setLoaded(true)} // ✅ skeleton removal
         className={`block h-auto w-full object-contain transition-all duration-500 hover:scale-110 ${loaded ? "opacity-100" : "absolute inset-0 opacity-0"} `}
       />

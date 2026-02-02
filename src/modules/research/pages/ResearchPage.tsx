@@ -17,7 +17,7 @@ const ResearchPage = () => {
   if (!content) return null; // or skeleton later
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground mt-nav-h">
       <main>
         <HeroSection content={content.hero} />
         <ResearchAreasSection areas={content.researchAreas} />

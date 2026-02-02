@@ -16,11 +16,9 @@ const SDGPage = () => {
   if (!content) return null;
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <main>
+    <div className="min-h-screen bg-background text-foreground mt-nav-h">
         <SDGHeroSection content={content.hero} />
         <SDGAlignmentSection goals={content.goals} />
-      </main>
     </div>
   );
 };

@@ -14,14 +14,14 @@ interface ResearchAreasSectionProps {
 
 const ResearchAreasSection = ({ areas }: ResearchAreasSectionProps) => {
   return (
-    <section className="py-section-y relative scroll-mt-nav-h">
+    <section className="py-section-y relative">
       <div className="container mx-auto px-safe-x">
         <div className="text-center mb-content-gap">
           <p className="text-primary font-medium tracking-widest uppercase text-body-sm mb-stack-gap">
             Our Focus
           </p>
           <h2 className="text-h2 mb-stack-gap">Core Areas of Research</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-body">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-body text-justify md:text-center">
             Our R&D initiatives span across four key domains, each designed to push
             the boundaries of innovation while delivering practical industrial solutions.
           </p>

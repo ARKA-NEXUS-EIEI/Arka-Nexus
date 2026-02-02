@@ -15,7 +15,7 @@ const SDGHeroSection = ({ content }: SDGHeroSectionProps) => {
   } = content;
 
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center mt-nav-h overflow-hidden">
+    <section className="relative flex items-center justify-center pt-section-y overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy-light to-background" />
 
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -23,7 +23,7 @@ const SDGHeroSection = ({ content }: SDGHeroSectionProps) => {
 
       <div className="absolute inset-0 opacity-5 grid-pattern" />
 
-      <div className="container mx-auto px-safe-x relative z-10 text-center">
+      <div className="container px-safe-x relative z-10 text-center">
         <div className="max-w-arka mx-auto">
           <p className="text-primary font-medium tracking-widest uppercase text-body-sm mb-stack-gap opacity-0 animate-fade-in">
             {eyebrow}
@@ -37,17 +37,17 @@ const SDGHeroSection = ({ content }: SDGHeroSectionProps) => {
             {description}
           </p>
 
-          <div className="mt-content-gap flex justify-center gap-card-gap opacity-0 animate-fade-in">
+          <div className="mt-content-gap flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-card-gap opacity-0 animate-fade-in px-safe-x">
             <a
               href="#sdg-alignment"
-              className="px-8 py-3 bg-primary text-primary-foreground font-medium rounded-button hover:bg-primary/90 transition-all glow-primary"
+              className="w-full sm:w-auto px-8 py-3 bg-primary text-primary-foreground font-medium rounded-button hover:bg-primary/90 transition-all glow-primary text-center"
             >
               {primaryCtaLabel}
             </a>
 
             <a
               href="/research"
-              className="px-8 py-3 border border-border text-foreground font-medium rounded-button hover:bg-secondary transition-all"
+              className="w-full sm:w-auto px-8 py-3 border border-border text-foreground font-medium rounded-button hover:bg-secondary transition-all text-center"
             >
               {secondaryCtaLabel}
             </a>

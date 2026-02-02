@@ -13,7 +13,7 @@ const HeroSection = ({ content }: HeroSectionProps) => {
   } = content;
 
   return (
-    <section className="relative min-h-[50vh] flex items-center justify-center pt-nav-h overflow-hidden">
+    <section className="relative flex items-center justify-center overflow-hidden pt-section-y">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy-light to-background" />
 
@@ -34,7 +34,7 @@ const HeroSection = ({ content }: HeroSectionProps) => {
             {title} <span className="text-gradient">{highlight}</span>
           </h1>
 
-          <p className="text-body text-muted-foreground leading-relaxed max-w-3xl mx-auto opacity-0 animate-fade-in">
+          <p className="text-body text-muted-foreground leading-relaxed max-w-3xl mx-auto opacity-0 animate-fade-in text-justify md:text-center">
             {description}
           </p>
         </div>

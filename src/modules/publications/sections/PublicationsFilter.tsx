@@ -109,7 +109,7 @@ const PublicationsFilters = ({
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="flex flex-row items-center gap-6"
+              className="flex flex-col sm:flex-row items-center gap-6"
             >
               {/* Results Found Pill */}
               <div className="px-4 py-1 rounded-full bg-neutral-white/5 border border-neutral-white/10 text-neutral-textMuted text-body-sm font-medium">

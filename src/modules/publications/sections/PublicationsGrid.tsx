@@ -1,6 +1,5 @@
 import { FileText, Download, Star } from "lucide-react";
 import type { Publication } from "../../../core/services/sanity/publications.service";
-import { usePublicationAnalytics } from "../hooks/usePublicationAnalytics";
 
 interface PublicationsGridProps {
   publications: Publication[];
@@ -11,7 +10,6 @@ const PublicationsGrid = ({
   publications,
   loading = false,
 }: PublicationsGridProps) => {
-  const { trackPreview, trackDownload } = usePublicationAnalytics();
 
   const downloadPDF = async (pdfUrl: string, fileName: string) => {
     try {
@@ -136,7 +134,6 @@ const PublicationsGrid = ({
               <button
                 type="button"
                 onClick={() => {
-                  trackPreview(pub);
                   openPreview(pub.pdfUrl);
                 }}
                 className="inline-flex flex-1 items-center justify-center gap-2 rounded-button bg-brand-primary px-4 py-2 font-medium text-white transition-all hover:bg-brand-secondary"
@@ -148,7 +145,6 @@ const PublicationsGrid = ({
               <button
                 type="button"
                 onClick={() => {
-                  trackDownload(pub);
                   downloadPDF(pub.pdfUrl, pub.title);
                 }}
                 className="inline-flex items-center justify-center rounded-button border border-border px-3 transition-colors hover:bg-secondary"
