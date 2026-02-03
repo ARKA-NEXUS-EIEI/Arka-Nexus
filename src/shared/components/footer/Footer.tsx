@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 
 import arka_logo from "@/assets/images/logos/arka_Nexus.png";
 import { getFooterData } from "../../../core/services/sanity/footer.service";
 import { useServiceRegistry } from "../../../core/hooks/useServiceRegistry";
 import { SERVICE_FOOTER_ICONS } from "../../../modules/services/config/serviceIcons";
+import { SOCIAL_LINKS } from "../../../core/config/links.config";
 
 type ContactDetails = {
   emails?: string[];
@@ -49,18 +50,31 @@ export default function Footer() {
           {/* Social Media Links */}
           <div className="flex gap-3">
             <motion.a
-              href="https://www.linkedin.com/company/arka-nexus/"
+              href={SOCIAL_LINKS.linkedin}
               whileHover={{ scale: 1.2 }}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-h3 text-neutral-textMuted transition-colors hover:text-brand-primary"
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </motion.a>
             <motion.a
-              href="#"
+              href={SOCIAL_LINKS.instagram}
               whileHover={{ scale: 1.2 }}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-h3 text-neutral-textMuted transition-colors hover:text-brand-primary"
             >
               <FontAwesomeIcon icon={faInstagram} />
+            </motion.a>
+            <motion.a
+              href={SOCIAL_LINKS.facebook}
+              whileHover={{ scale: 1.2 }}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-h3 text-neutral-textMuted transition-colors hover:text-brand-primary"
+            >
+              <FontAwesomeIcon icon={faFacebook} />
             </motion.a>
           </div>
 

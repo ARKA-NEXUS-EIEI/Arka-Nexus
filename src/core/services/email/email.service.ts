@@ -23,6 +23,24 @@ export const sendThankYouEmail = async (data: {
 };
 
 export const sendNotificationEmail = async (data: ContactFormData) => {
+  
+  const hasMessage =
+    data.message && data.message.trim().length > 0;
+
+  const additionalMessageBlock = hasMessage
+    ? `
+      <p style="margin:24px 0 8px;font-weight:bold;">Additional Message</p>
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation"
+        style="background:#f9fafb;border-radius:8px;">
+        <tr>
+          <td style="padding:12px;white-space:pre-line;">
+            ${data.message}
+          </td>
+        </tr>
+      </table>
+    `
+    : "";
+
   return emailjs.send(
     emailConfig.serviceId,
     emailConfig.notificationTemplateId,
@@ -35,8 +53,7 @@ export const sendNotificationEmail = async (data: ContactFormData) => {
       customer_email: data.email,
       mobile: data.mobile,
       services: data.services === "Others" ? data.otherServices : data.services,
-      additional_message: data.message || "No additional message",
-      gmail: "service@arkaxus.com",
+      additional_message: additionalMessageBlock,
     },
     emailConfig.publicKey,
   );
